@@ -1,9 +1,9 @@
 # main text of home
 name: ch4n3l    
-# bio: cat ~/writeups.txt
+bio: cat ~/writeups.txt
 
 # twitter summary info
-#  description: A blog about technology and stuff related
+description: A blog about technology and stuff related
 
 # if it's an external image, update below for true
 # better with square images
@@ -17,8 +17,8 @@ resume-external: true
 resume-url: https://google.com/?q=my+resume
 
 url: https://koppl.in/indigo
-your url: https://ch4n3l.github.io
- 
+# your url: http://USERNAME.github.io
+
 permalink: /:title/
 
 # To enable google analytics, supply your token below
@@ -34,15 +34,15 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-#facebook: myfacebook
-twitter: luvch4n3l
+facebook: myfacebook
+twitter: mytwitter
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: ch4n3l
+github: mygithub
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
