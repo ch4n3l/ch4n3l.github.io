@@ -12,7 +12,7 @@ layout: content
                  MMM88&&&&&&&&
                  'MMM88&&&&&&'
                    'MMM8&&&'      *   A growing collection of notes and writeups as I continue 
-                                                           my journey. ~ ~~~ch4n3l~~~
+                                                           my journey. ~ <span>ch4n3l</span>
           |\___/|                                       
           )     (             .              '
          =\     /=

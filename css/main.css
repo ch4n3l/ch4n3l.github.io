@@ -10,6 +10,9 @@ body {
     text-align: center;
     //width: 800px;
 }
+pre span{
+    color: rgba(255,76,135, 0.8);
+}
 h1 {
   color: rgba(220,220,0,0.8);
   font-size: 24px;
