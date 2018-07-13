@@ -11,7 +11,7 @@ tags:
     - tmux
 ---
 
-![Screenshot]({{ site.baseurl }}images/posts/2017/01.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/01.png)
 
 > Caso queira ver o print maior, [clica aqui \[0\]][0].
 
