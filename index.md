@@ -11,8 +11,8 @@ layout: content
      *           MMM88&&&&&&&&
                  MMM88&&&&&&&&
                  'MMM88&&&&&&'
-                   'MMM8&&&'      *
-          |\___/|
+                   'MMM8&&&'      *                 A growing collection of notes and writeups as I continue my journey.
+          |\___/|                                                        - ch4n3l
           )     (             .              '
          =\     /=
            )===(       *
@@ -27,6 +27,3 @@ layout: content
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
   jgs|  |  |  |  |  |  |  |  |  |  |  |  |  |
 </pre>
-
-<center>A growing collection of notes and writeups as I continue my journey.</center>
-<center>-chan3l</center>
