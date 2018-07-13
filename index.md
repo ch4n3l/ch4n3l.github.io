@@ -1,10 +1,11 @@
 ---
-layout: content
+layout: default
 ---
 
 <center>chan3l@null:~/notes# cat manifesto</center>
 <br>
 <pre>
+remember :(
              *     ,MMM8&&&.            *
                   MMMM88&&&&&    .
                  MMMM88&&&&&&&
