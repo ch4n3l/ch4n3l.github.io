@@ -4,8 +4,8 @@ layout: content
 
 ### cat
 
-A growing collections of notes and writeups as I go further on my journey.
-ch4n3l
+A growing collections of note and writeups as I go further along on my journey.
+<br> ch4n3l
 
 
 ### Screenshots
