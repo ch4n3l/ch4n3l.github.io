@@ -13,11 +13,8 @@ body {
 pre span {
     color: rgba(255,76,135, 0.8);
 }
-pre s {
-    color: rgba(255,250,10, 0.8);
-}
 h1 {
-  color: rgba(220,220,0,0.8);
+  color: rgba(38,194,129, 0.8);
   font-size: 24px;
   font-family: monospace;
   font-weight: bold;
