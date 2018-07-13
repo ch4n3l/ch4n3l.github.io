@@ -2,7 +2,7 @@
 layout: content
 ---
 
-A growing collections of note and writeups as I go further along on my journey.>
+<center>A growing collections of note and writeups as I go further along on my journey.></center>
 <br> ch4n3l
 
 
