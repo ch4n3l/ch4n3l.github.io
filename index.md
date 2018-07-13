@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 ---
 
 <center>chan3l@null:~/notes# cat manifesto</center>
