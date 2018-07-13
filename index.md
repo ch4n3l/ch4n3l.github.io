@@ -4,22 +4,9 @@ layout: content
 
 ### cat
 
-It's just one more [jekyll](https://github.com/jekyll/jekyll) theme. Maybe it's has some appearance like a linux console. :)
+A growing collections of notes and writeups as I go further on my journey.
+ch4n3l
 
-[Bootstrap](http://getbootstrap.com/) was added to turn responsible. Thanks, [@magnunleno](https://github.com/magnunleno).
-
-### Features
-
-- [x] Google analytics
-- [x] Disqus
-- [x] Responsible
-- [x] Highlights for code
-
-### Characteristics
-
-- [x] Customized (and nice :P) 404 page
-- [x] Simple
-- [x] Friendly to read
 
 ### Screenshots
 
