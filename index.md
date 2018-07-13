@@ -2,7 +2,7 @@
 layout: content
 ---
 
-### About
+### cat
 
 It's just one more [jekyll](https://github.com/jekyll/jekyll) theme. Maybe it's has some appearance like a linux console. :)
 
