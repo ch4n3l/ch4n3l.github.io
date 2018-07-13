@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: "notes"
-permalink: /notes/
+title: "writeups"
+permalink: /writeups/
 ---
 
 <ul class="posts">
