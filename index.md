@@ -1,11 +1,10 @@
 ---
-layout: blog
+layout: content
 ---
 
 <center>chan3l@null:~/notes# cat manifesto</center>
 <br>
 <pre>
-remember :(
              *     ,MMM8&&&.            *
                   MMMM88&&&&&    .
                  MMMM88&&&&&&&
