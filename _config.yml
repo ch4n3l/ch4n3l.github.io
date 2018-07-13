@@ -1,21 +1,10 @@
 # Site settings
 title: "~/notes"
 bye_message: ""
-baseurl: ""
+baseurl: "/"
 url: "https://ch4n3l.github.io"
 disqus: 
 
-# Header settings
-nick: "gjuniioor"
-mail:
-    domain: "protonmail"
-    ext: "ch"
-source_code:
-    server: "github.com"
-    nick: "gjuniioor"
-blog:
-    server: "wordpress.com"
-    nick: "gjuniioor"
 
 # Build settings
 markdown: kramdown
