@@ -1,7 +1,7 @@
 ---
-layout: content
-title: "Blog Posts"
-permalink: /blog/
+layout: blog
+title: "notes"
+permalink: /notes/
 ---
 
 <ul class="posts">
