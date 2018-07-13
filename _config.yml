@@ -1,7 +1,7 @@
 # Site settings
 title: "~/notes"
 bye_message: ""
-baseurl: "/ch4n3l"
+baseurl: "/"
 url: "https://ch4n3l.github.io"
 disqus: 
 
