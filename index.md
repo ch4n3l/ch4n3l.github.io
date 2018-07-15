@@ -1,7 +1,7 @@
 ---
 layout: content
 ---
-
+<!-- THEME CREDIT @ https://github.com/gjuniioor/clyell -->
 <center>chan3l@null:~/notes# cat manifesto</center>
 <br>
 <pre>
