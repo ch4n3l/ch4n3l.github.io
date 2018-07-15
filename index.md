@@ -1,7 +1,7 @@
 ---
 layout: content
 ---
-<center>chan3l@null:~/notes# cat manifesto</center>
+<center>chan3l@null:~/research# cat manifesto</center>
 <br>
 <pre>
              *     ,MMM8&&&.            *
