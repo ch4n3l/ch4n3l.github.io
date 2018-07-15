@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	"Redimensionar partições LVM"
-date:	2017-04-11 03:00:00
+date:	2018-07-14 03:00:00
 categories:
     - writeups
 tags:
