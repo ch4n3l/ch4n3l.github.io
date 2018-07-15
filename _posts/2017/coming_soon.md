@@ -5,6 +5,6 @@ date:	2017-01-01 12:00:00
 categories:
     - notes
 tags:
-    - coming_soon
+    - coming_soon_+
 ---
 
