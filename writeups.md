@@ -5,7 +5,7 @@ permalink: /writeups/
 ---
 
 <ul class="posts">
-    {% for post in site.categories.notes %}
+    {% for post in site.categories.writeups %}
         <li>
             <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
             ::
