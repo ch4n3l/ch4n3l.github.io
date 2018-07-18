@@ -1,0 +1,15 @@
+blog:
+writeups
+    - buffer overflow
+        - slmail
+        - proftpd
+        - brainpan
+        - etc
+
+    vulnhub machines
+        - goldeneye
+        - etc
+    htb
+
+    notes - windows blind files, lfi/rfi via logs
+
