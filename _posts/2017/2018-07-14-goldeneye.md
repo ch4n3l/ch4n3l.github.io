@@ -277,7 +277,7 @@ Now retrying the blog post:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/shell.png)
 
-We got a shell!
+We get a shell!
 
 After spawning a TTY shell:
 `python -c 'import pty;pty.spawn("/bin/bash")'`
@@ -296,6 +296,32 @@ The kernel version stands out to me because 2014 is a bit old.
 Looking for exploits that match the kernel:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/kernel-searchsploit.png)
+
+After compiling the exploit on our local machine, and transferring to the host. 
+
+We run the exploit:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/exploit.png)
+
+An error has occurred: `gcc: not found`
+
+That is because gcc is not installed on the machine, but cc is.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/gccvscc.png)
+
+In the exploit's source code on `line 143`, we see:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/gcc.png)
+
+Change it to use cc:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/cc.png)
+
+After recompiling the exploit, and uploading to the host, we run it once again:
+
+
+
+
 
 
 
