@@ -146,8 +146,29 @@ Cracking pop3 account:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/natalyacracked.png)
 
+The second e-mail seems to contain very interesting information:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/secondemail.png)
 
+We get credentials, and a new hidden directory.
+
+As the e-mail says, we need to configure our /etc/hosts, or the virtual host will not work.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/error.png)
+
+Updating /etc/hosts:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/hosts.png)
+
+~~~
+Use your text editor of choice, and open up /etc/hosts
+
+Following the default format, IP {tab} Hostname 
+
+/etc/hosts essentially works as a local DNS
+
+Read more: http://bencane.com/2013/10/29/managing-dns-locally-with-etchosts/
+~~~
 
 
 
