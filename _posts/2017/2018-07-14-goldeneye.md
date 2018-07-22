@@ -170,7 +170,7 @@ Following the default format, IP {tab} Hostname
 Read more: http://bencane.com/2013/10/29/managing-dns-locally-with-etchosts/
 ~~~
 
-Now we can try to browse to `http://severnaya-station.com/gnocertdir`:
+Now we can try to browse to `http://severnaya-station.com/gnocertdir`
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/moodle.png)
 
@@ -196,7 +196,14 @@ The hint being his e-mail username, which led me to try cracking his email:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/doakcracked.png)
 
+Reading his messages, we find:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/doakcredentials.png)
 
+New credentials, `dr_doak:4England!`
+
+Using the credentials to log into Moodle:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/doakmoodle.png)
 
 
