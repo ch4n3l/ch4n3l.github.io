@@ -4,7 +4,7 @@ title: "notes"
 permalink: /notes/
 ---
 <head>
-    <title> cat ~/ch4n3l/research/notes </title>
+    <title> notes </title>
 </head>
 <ul class="posts">
     {% for post in site.categories.notes %}
