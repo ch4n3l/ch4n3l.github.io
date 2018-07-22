@@ -28,7 +28,7 @@ IP = host's ip
 a = all (Scan 65535 ports)
 ~~~
 
-`Ports 80 and 9072 are open`
+<center> `Ports 80 and 9072 are open` </center>
 
 ## ii. Enumeration
 
