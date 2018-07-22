@@ -28,7 +28,7 @@ IP = host's ip
 a = all (Scan 65535 ports)
 ~~~
 
-Ports 80 and 9072 are open.
+`Ports 80 and 9072 are open`
 
 ## ii. Enumeration
 
@@ -51,6 +51,14 @@ Inside, we find flag1.txt and what seems to be a dictionary file.
 Navigating to flag1.txt:
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/flag1.png)
 
+Perfect, flag #1 captured.
+
+The next hint is:
+~~~
+9072. The secret is at home.
+~~~
+
+Could this be referring to port 9072 that we found open in the port scan?
 
 
 
