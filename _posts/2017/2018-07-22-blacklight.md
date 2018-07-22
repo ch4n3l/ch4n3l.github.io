@@ -28,6 +28,8 @@ IP = host's ip
 a = all (Scan 65535 ports)
 ~~~
 
+Ports 80 and 9072 are open.
+
 ## ii. Enumeration
 
 Starting with port 80, we browse to the host.
@@ -40,6 +42,14 @@ Running a directory search to see if we can find any hidden files or directories
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/dirsearch.png)
 
+`robots.txt` seems to stand out.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/robots.png)
+
+Inside, we find flag1.txt and what seems to be a dictionary file.
+
+Navigating to flag1.txt:
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/flag1.png)
 
 
 
