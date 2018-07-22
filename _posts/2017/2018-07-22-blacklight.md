@@ -10,7 +10,7 @@ tags:
     - vulnhub
 ---
 <head>
-	<title> Blacklight Writuep | Vulnhub </title>
+	<title> Blacklight Writup | Vulnhub </title>
 </head>
 <title> Blacklight Writeup </title>
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/logo.png)
