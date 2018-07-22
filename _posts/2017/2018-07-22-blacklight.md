@@ -138,26 +138,9 @@ Apart from that, I enjoyed the box.
 
 Find the box on Vulnhub: https://www.vulnhub.com/entry/blacklight-1,242/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-~~~ 
-
-Sources/Links:
 ~~~
+Sources / Links:
+
 [0]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 [1]: https://www.vulnhub.com/entry/blacklight-1,242/
 ~~~
