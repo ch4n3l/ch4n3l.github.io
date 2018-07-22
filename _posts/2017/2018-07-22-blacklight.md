@@ -15,6 +15,7 @@ tags:
 ## i. Port Scan
 
 Full TCP port scan using unicornscan:
+
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/port.png)
 
 ~~~
@@ -30,12 +31,15 @@ a = all (Scan 65535 ports)
 ## ii. Enumeration
 
 Starting with port 80, we browse to the host.
-![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/http.png)
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/logo.png)
 
 Seems like a static landing page:
+
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/static.png)
 
 Running a directory search to see if we can find any hidden files or directories:
+
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/dirsearch.png)
 
 
