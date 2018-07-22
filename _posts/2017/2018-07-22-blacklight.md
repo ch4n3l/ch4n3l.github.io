@@ -32,11 +32,9 @@ a = all (Scan 65535 ports)
 
 Starting with port 80, we browse to the host.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/logo.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/http.png)
 
-Seems like a static landing page:
-
-![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/static.png)
+We got a hint, `The web is the way`.
 
 Running a directory search to see if we can find any hidden files or directories:
 
