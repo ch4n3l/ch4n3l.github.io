@@ -202,8 +202,25 @@ Reading his messages, we find:
 
 New credentials, `dr_doak:4England!`
 
-Using the credentials to log into Moodle:
+After logging into moodle using his credentials.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/doakmoodle.png)
+Enumerating once again, we stumble across private files:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/privatefiles.png)
+
+Reading `s3cret.txt`
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/s3cret.png)
+
+Navigating to `/dir007key/for-007.jpg`, we are presented with an image:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/drdoak.png)
+
+Image doesn't really seem interesting, downloading the image and running `strings` to see if there is any hidden text in the image:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/strings.png)
+
+
+
 
 
