@@ -150,7 +150,7 @@ The second e-mail seems to contain very interesting information:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/secondemail.png)
 
-We get credentials, and a new hidden directory.
+We get credentials `xenia:RCP90rulez!`, and a new hidden directory.
 
 As the e-mail says, we need to configure our /etc/hosts, or the virtual host will not work.
 
@@ -178,6 +178,23 @@ It seems that the software running on the Web Server is Moodle. If we look for a
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/moodleploits.png)
 
+Logging in as Xenia and enumerating Moodle:
+
+See courses (Introduction to GoldenEye):
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/courses.png)
+
+Though it seems like we cannot see what the course contains (as we are not enrolled):
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/enrolled.png)
+
+Looking at messages, we can see a message from Dr Doak, which contains a hint:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/doakmessage.png)
+
+The hint being his e-mail username, which led me to try cracking his email:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/doakcracked.png)
 
 
 
