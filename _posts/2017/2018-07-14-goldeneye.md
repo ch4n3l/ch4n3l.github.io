@@ -69,12 +69,16 @@ We are able to gain access.
 sev-home seems tobe a landing page which has a couple hints:
 
 Hint #1: 
-~~~ Please email a qualified GNO supervisor to receive the online GoldenEye Operators Training to become an Administrator of the GoldenEye system ~~~
+~~~ 
+Please email a qualified GNO supervisor to receive the online GoldenEye Operators Training to become an Administrator of the GoldenEye system 
+~~~
 
 which is followed up by:
 
 Hint #2: 
-~~~ Remember, since security by obscurity is very effective, we have configured our pop3 service to run on a very high non-default port ~~~
+~~~ 
+Remember, since security by obscurity is very effective, we have configured our pop3 service to run on a very high non-default port
+~~~
 
 
 Running a service detection scan using nmap on the unknown ports (55006 & 55007) we found earlier:
@@ -86,6 +90,14 @@ Looks like ports 55006 and 55007 was the mail server that Hint #2 was talking ab
 If we look at the bottom of the source for /sev-home, we also see qualified operators.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/operators.png)
+
+After going millions of rabbit holes, we can try cracking the pop3 accounts for the operators.
+
+` ** Note: The password is not in rockyou.txt, which is very annoying`
+~~~
+I am going to use the `fasttrack.txt` wordlist which contains the password.
+https://raw.githubusercontent.com/trustedsec/social-engineer-toolkit/master/src/fasttrack/wordlist.txt
+~~~
 
 
 
