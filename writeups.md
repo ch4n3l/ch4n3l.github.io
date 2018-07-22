@@ -3,7 +3,9 @@ layout: blog
 title: "writeups"
 permalink: /writeups/
 ---
-
+<head>
+    <title> cat ~/ch4n3l/research/writeups </title>
+</head>
 <ul class="posts">
     {% for post in site.categories.writeups %}
         <li>

@@ -1,6 +1,9 @@
 ---
 layout: content
 ---
+<head>
+    <title> ~/research </title>
+</head>
 <center>chan3l@null:~/research# cat manifesto</center>
 <br>
 <pre>
