@@ -174,6 +174,10 @@ Now we can try to browse to `http://severnaya-station.com/gnocertdir`:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/moodle.png)
 
+It seems that the software running on the Web Server is Moodle. If we look for any exploits, we see there is a bunch but each for a different version.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/moodleploits.png)
+
 
 
 
