@@ -333,9 +333,12 @@ Looks like the exploit worked, and we are now root.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/webflag.png)
 
-This is one of my favorite boxes so far. It is challenging, but rewarding. I appreciate the rabbit holes that I ran into this box because it helped me explore topics I wasn't so familiar with.
+This is one of my favorite boxes so far. The box is challenging, but rewarding.
 
-The only issue with the box was the wordlist not being rockyou.txt, because of that simple fact I thought that the pop3 couldn't be cracked.
+I enjoyed the rabbit holes in this box, because it helped show light to topics I wasn't familiar with.
+
+The only "issue" I had with this box, was with the wordlist. Trying to crack using `rockyou.txt` failed, and I tried a couple other wordlists such as SecLists, but with no luck. This actually threw me down a different hole.
+
 
 Attempt the box: https://www.vulnhub.com/entry/goldeneye-1,240/
 
