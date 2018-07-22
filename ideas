@@ -1,4 +1,8 @@
 blog:
+
+- fix seo [fix <title> so it's not custom for every page]
+    make it dynamic <title> {post.title} Writeup </title>
+
 writeups
     - buffer overflow
         - slmail
@@ -22,3 +26,5 @@ blacklight ~ rooted
 july 22 2018 ~ sunday (blog day)
 goldeneye
 blacklight
+
+
