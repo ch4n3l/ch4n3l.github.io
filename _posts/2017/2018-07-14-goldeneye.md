@@ -212,6 +212,10 @@ Reading `s3cret.txt`
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/s3cret.png)
 
+~~~
+s3cret.txt
+~~~
+
 Navigating to `/dir007key/for-007.jpg`, we are presented with an image:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/drdoak.png)
@@ -219,6 +223,16 @@ Navigating to `/dir007key/for-007.jpg`, we are presented with an image:
 Image doesn't really seem interesting, downloading the image and running `strings` to see if there is any hidden text in the image:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/strings.png)
+
+We find what seems like to be a base64 encoded string, decoding the string:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/base64.png)
+
+`xWinter1995x!` looks like a password. Based off the note, we can confirm it is.
+
+Trying to login using `admin:xWinter1995x!`
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/admin.png)
 
 
 
