@@ -77,7 +77,11 @@ Attempting to crack the hash using hashcat with the blacklight dictionary:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/cracker.png)
 
+Looks like the hash can't be cracked... let's move on to the next command in the console.
 
+.exec seems like it allows us to execute commands. Let's try a basic command to see if it is executed.
+
+`Note: Once you issue two commands to the server (including .readhash), port 9072 will close and you will have to restart the virtual machine.`
 
 
 
