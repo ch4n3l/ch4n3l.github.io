@@ -75,3 +75,17 @@ which is followed up by:
 
 Hint #2: 
 ~~~ Remember, since security by obscurity is very effective, we have configured our pop3 service to run on a very high non-default port ~~~
+
+
+Running a service detection scan using nmap on the unknown ports (55006 & 55007) we found earlier:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/nmap.png)
+
+Looks like ports 55006 and 55007 was the mail server that Hint #2 was talking about.
+
+If we look at the bottom of the source for /sev-home, we also see qualified operators.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/operators.png)
+
+
+
