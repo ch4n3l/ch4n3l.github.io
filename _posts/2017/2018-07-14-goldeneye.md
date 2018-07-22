@@ -293,6 +293,8 @@ $ cat /etc/*release
 
 The kernel version stands out to me because 2014 is a bit old.
 
+## iv. Privilege Escalation
+
 Looking for exploits that match the kernel:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/kernel-searchsploit.png)
@@ -319,11 +321,30 @@ Change it to use cc:
 
 After recompiling the exploit, and uploading to the host, we run it once again:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/privesc.png)
 
+Looks like the exploit worked, and we are now root.
 
+`/root/.flag.txt`
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/flag.png)
 
+## v. Conclusion
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/webflag.png)
+
+This is one of my favorite boxes so far. It is challenging, but rewarding. I appreciate the rabbit holes that I ran into this box because it helped me explore topics I wasn't so familiar with.
+
+The only issue with the box was the wordlist not being rockyou.txt, because of that simple fact I thought that the pop3 couldn't be cracked.
+
+Attempt the box: https://www.vulnhub.com/entry/goldeneye-1,240/
+
+~~~
+Sources / Links:
+
+[0]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+[1]: https://www.vulnhub.com/entry/goldeneye-1,240/
+~~~
 
 
 
