@@ -234,6 +234,19 @@ Trying to login using `admin:xWinter1995x!`
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/admin.png)
 
+Great we now have administration rights. After poking around in the admin section, there is a area which displays information about the web software + server information.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/server.png)
+
+In Environment, we are presented with the version:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/version.png)
+
+After trying some exploits, and not having any luck. I poked around a bit more, and found System Paths.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/systempaths.png)
+
+
 
 
 
