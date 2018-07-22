@@ -68,8 +68,10 @@ We are able to gain access.
 
 sev-home seems tobe a landing page which has a couple hints:
 
-Hint #1: ~~~ Please email a qualified GNO supervisor to receive the online GoldenEye Operators Training to become an Administrator of the GoldenEye system ~~~
+Hint #1: 
+~~~ Please email a qualified GNO supervisor to receive the online GoldenEye Operators Training to become an Administrator of the GoldenEye system ~~~
 
 which is followed up by:
 
-Hint #2: ~~~ Remember, since security by obscurity is very effective, we have configured our pop3 service to run on a very high non-default port ~~~
+Hint #2: 
+~~~ Remember, since security by obscurity is very effective, we have configured our pop3 service to run on a very high non-default port ~~~
