@@ -17,6 +17,45 @@ tags:
 Full TCP port scan using unicornscan:
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/port.png)
 
+~~~
+$ unicornscan -Iv -r 160 -mT IP:a
+
+-Iv = Immediately display results as they are found (-v = verbose)
+-r = rate of packets to send per second
+-mT = mode TCP
+IP = host's ip
+a = all (Scan 65535 ports)
+~~~
+
+## ii. Enumeration
+
+Starting with port 80, we browse to the host.
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/http.png)
+
+Seems like a static landing page:
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/static.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ~~~ 
 
 Sources/Links:
