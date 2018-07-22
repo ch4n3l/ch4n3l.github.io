@@ -49,6 +49,7 @@ Running a directory search to see if we can find any hidden files or directories
 Inside, we find flag1.txt and what seems to be a dictionary file.
 
 Navigating to flag1.txt:
+
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/flag1.png)
 
 Perfect, flag #1 captured.
@@ -60,7 +61,21 @@ The next hint is:
 
 Could this be referring to port 9072 that we found open in the port scan?
 
+Connecting to port 9072 using netcat:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/console.png)
+
+It seems that we are able to execute a few commands.
+
+Running .readhash:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/hash.png)
+
+Could this hash be related to the wordlist we found earlier?
+
+Attempting to crack the hash using hashcat with the blacklight dictionary:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/cracker.png)
 
 
 
