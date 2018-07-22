@@ -95,7 +95,7 @@ Perfect, it looks like the box is making a connection to our host.
 
 Which means that the box is executing commands, but we don't see the output (therefore it is called blind).
 
-## iii. Low Privilege Shell
+## iii. Reverse Shell
 
 Since we know that the box is able to execute commands, let's try a reverse shell.
 
@@ -124,7 +124,19 @@ python -c 'import pty;pty.spawn("/bin/bash")'
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/pty.png)
 
-Looks like we are root already!
+`Looks like we are root already!`
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/root.png)
+
+# IV. Conclusion
+
+Blacklight was fun & easy. The hash rabbit hole drove me crazy for a few hours, while I tried cracking with wordlists such as rockyou, or trying to use the blacklight wordlist with rules.
+
+Apart from that, I felt that the privilege escalation was a little incomplete, as we were elevated to root immediately.
+
+Apart from that, I enjoyed the box.
+
+Find the box on Vulnhub: https://www.vulnhub.com/entry/blacklight-1,242/
 
 
 
@@ -146,9 +158,8 @@ Looks like we are root already!
 
 Sources/Links:
 ~~~
-[0]: https://tools.kali.org/information-gathering/unicornscan
-[1]: https://www.thegeekdiary.com/what-is-suid-sgid-and-sticky-bit/
-[2]: https://unix.stackexchange.com/questions/191940/difference-between-owner-root-and-ruid-euid
+[0]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+[1]: https://www.vulnhub.com/entry/blacklight-1,242/
 ~~~
 
 
