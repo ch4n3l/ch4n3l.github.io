@@ -86,7 +86,7 @@ Looks like the hash can't be cracked... let's move on to the next command in the
 
 `Note: Once you issue two commands to the server (including .readhash), port 9072 will close and you will have to restart the virtual machine.`
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/exec.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/exec2.png)
 
 Seems like the command is not executed, (or maybe it is?), but we cannot see the output.
 

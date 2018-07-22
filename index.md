@@ -2,7 +2,7 @@
 layout: content
 ---
 <head>
-    <title> ~/research </title>
+    <title> home </title>
 </head>
 <center>chan3l@null:~/research# cat manifesto</center>
 <br>
