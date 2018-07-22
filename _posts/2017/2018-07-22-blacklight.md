@@ -9,6 +9,9 @@ tags:
     - boot2root
     - vulnhub
 ---
+<head>
+	<title> Testing </title>
+</head>
 <title> Blacklight Writeup </title>
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/logo.png)
 
