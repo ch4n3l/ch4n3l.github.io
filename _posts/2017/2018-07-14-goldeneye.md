@@ -170,6 +170,10 @@ Following the default format, IP {tab} Hostname
 Read more: http://bencane.com/2013/10/29/managing-dns-locally-with-etchosts/
 ~~~
 
+Now we can try to browse to `http://severnaya-station.com/gnocertdir`:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/moodle.png)
+
 
 
 
