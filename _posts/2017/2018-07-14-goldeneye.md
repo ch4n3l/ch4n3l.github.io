@@ -38,8 +38,6 @@ Starting off with port 80, we browse to the host and are presented with:
 
 Navigating to `/sev-home`:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/http.png)
-
 We are presented with basic authentication. 
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/basic.png)
