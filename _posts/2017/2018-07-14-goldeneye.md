@@ -279,6 +279,17 @@ Now retrying the blog post:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/shell.png)
 
+After spawning a TTY shell:
+`python -c 'import pty;pty.spawn("/bin/bash")'`
+
+Enumerating the Kernel & Operating System:
+
+~~~
+$ uname -a
+$ cat /etc/*release
+~~~
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/kernel.png)
 
 
 
