@@ -35,6 +35,9 @@ Starting with port 80, we browse to the host.
 Seems like a static landing page:
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/static.png)
 
+Running a directory search to see if we can find any hidden files or directories:
+![Screenshot]({{ site.baseurl }}/images/posts/2017/blacklight/dirsearch.png)
+
 
 
 
