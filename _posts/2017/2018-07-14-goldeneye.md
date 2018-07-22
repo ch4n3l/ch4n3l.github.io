@@ -295,6 +295,8 @@ The kernel version stands out to me because 2014 is a bit old.
 
 Looking for exploits that match the kernel:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/kernel-searchsploit.png)
+
 
 
 
