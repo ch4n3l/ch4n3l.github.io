@@ -28,13 +28,12 @@ If you are unsure of what the command does, refer to my other writeup which expl
 https://ch4n3l.github.io/writeups/blacklight/
 ~~~
 
-`Ports 
-
+`Ports 80 (http), 25 (smtp), 55006 (unknown) & 55007 (unknown) found. `
 
 ##ii. Enumeration
 
 Starting off with port 80, we browse to the host and are presented with:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/logo.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/http.png)
 
 
