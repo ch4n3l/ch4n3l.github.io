@@ -128,6 +128,27 @@ PASS [password]
 For a full list of pop3 commands see: https://www.electrictoolbox.com/article/networking/pop3-commands/
 ~~~
 
+Now that we are authenticated, we can use `LIST` to list the messages and `RETR {#}` to read the message:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/list.png)
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/retr.png)
+
+` Note:  I have more messages because of a rabbit hole. `
+
+The only message of interest was the one above. (Still doesn't give us any information)
+
+At first, I thought there was a file attached to the e-mail, so I setup Thunderbird and connected to the pop3 server but it turned out to be a rabbit hole...
+
+Let's move onto Natalya:
+
+Cracking pop3 account:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/natalyacracked.png)
+
+
+
+
 
 
 
