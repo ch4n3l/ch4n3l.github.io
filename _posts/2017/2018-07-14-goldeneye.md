@@ -236,8 +236,6 @@ Trying to login using `admin:xWinter1995x!`
 
 Great we now have administration rights. After poking around in the admin section, there is a area which displays information about the web software + server information.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/server.png)
-
 In Environment, we are presented with the version:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/version.png)
@@ -279,6 +277,8 @@ Now retrying the blog post:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/shell.png)
 
+We got a shell!
+
 After spawning a TTY shell:
 `python -c 'import pty;pty.spawn("/bin/bash")'`
 
@@ -290,6 +290,11 @@ $ cat /etc/*release
 ~~~
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/kernel.png)
+
+The kernel version stands out to me because 2014 is a bit old.
+
+Looking for exploits that match the kernel:
+
 
 
 
