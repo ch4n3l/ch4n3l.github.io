@@ -48,6 +48,10 @@ I'm going to save you some time, the password is not in rockyou... so let's move
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/wpscan-userforce.png)
 
 wspcan shows that a plugin named job-manager is installed, and has a vulnerability in which discloses uploaded file names.
+'''
+https://vagmour.eu/cve-2015-6668-cv-filename-disclosure-on-job-manager-wordpress-plugin/
+'''
+
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/jobmanager.png)
 
@@ -68,6 +72,19 @@ Reading the vulnerability, we see that we can see uploaded resumes if we change 
 In order to speed things up, I wrote a simple script to return the first 20 pages:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/script.png)
+
+`HackerAccessGranted` looks interesting...
+
+As the article linked above mentions, the upload structure for wordpress is: 
+'''
+/wp-content/uploads/%year%/%month%/%filename%
+'''
+
+The article also includes a script which will help bruteforce the extension of the file, as we only have the filename.
+
+Fixing the script to update the years (we can see that the first blog post is in April of 2017):
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/years.png)
 
 
 
