@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	"TenTen Writeup"
-date:	2018-07-22 03:01:00
+date:	2018-09-10 03:01:00
 categories:
     - writeups
 tags:
