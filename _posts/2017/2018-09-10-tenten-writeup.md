@@ -47,6 +47,15 @@ I'm going to save you some time, the password is not in rockyou... so let's move
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/wpscan-userforce.png)
 
+wspcan shows that a plugin named job-manager is installed, and has a vulnerability in which discloses uploaded file names.
+
+On the index page, we see there is an area to register for a job:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/joblisting.png)
+
+
+
+
 ~~~
 Sources / Links:
 
