@@ -13,28 +13,21 @@ tags:
 	<title> TenTen Writeup | HackTheBox </title>
 </head>
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/logo.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/logo.png)
 
 ## i. Port Scan
 
-Using unicornscan to scan all TCP ports:
+Using nmap to scan the ports:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/ports.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/portscan.png)
 
-~~~
-$ unicornscan -Iv -r 160 -mT 10.0.2.10:a
-
-If you are unsure of what the command does, refer to my other writeup which explains it in more detail:
-https://ch4n3l.github.io/writeups/blacklight/
-~~~
-
-`Ports 80 (http), 25 (smtp), 55006 (unknown) & 55007 (unknown) found. `
+`Ports 80 (http) & 22 (ssh) are open.`
 
 ## ii. Enumeration
 
 Starting off with port 80, we browse to the host and are presented with:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/goldeneye/http.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/http.png)
 
 ~~~
 Sources / Links:
