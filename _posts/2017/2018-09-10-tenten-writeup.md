@@ -126,6 +126,16 @@ We can try using `john` to crack, though first we need to convert the RSA key to
 $ ssh2john id_rsa > crackme
 ~~~
 
+Now time to crack:
+
+~~~
+$ john --wordlist=/usr/share/wordlists/rockyou.txt --format=SSH crackme
+~~
+
+After the hash cracks:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/john.png)
+
 
 ~~~
 Sources / Links:
