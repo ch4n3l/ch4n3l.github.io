@@ -49,9 +49,27 @@ I'm going to save you some time, the password is not in rockyou... so let's move
 
 wspcan shows that a plugin named job-manager is installed, and has a vulnerability in which discloses uploaded file names.
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/jobmanager.png)
+
 On the index page, we see there is an area to register for a job:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/joblisting.png)
+
+Reading the vulnerability, we see that we can see uploaded resumes if we change the number in the URL.
+
+`Before`:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/parameter.png)
+
+`After`:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/parameterafter.png)
+
+In order to speed things up, I wrote a simple script to return the first 20 pages:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/script.png)
+
+
 
 
 
