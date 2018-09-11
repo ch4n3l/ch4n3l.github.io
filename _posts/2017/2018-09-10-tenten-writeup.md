@@ -130,7 +130,7 @@ Now time to crack:
 
 ~~~
 $ john --wordlist=/usr/share/wordlists/rockyou.txt --format=SSH crackme
-~~
+~~~
 
 After the hash cracks:
 
@@ -147,6 +147,8 @@ $ chmod 600 id_rsa
 We are in!
 
 ## iii. Privilege Escalation
+
+
 
 ~~~
 Sources / Links:
