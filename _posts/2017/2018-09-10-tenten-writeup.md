@@ -29,6 +29,19 @@ Starting off with port 80, we browse to the host and are presented with:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/http.png)
 
+We can see that Wordpress is running, which means it's time for wpscan!
+
+wpscan returns the Wordpress Version, and other vital information such as vulnerabilities, themes, plugins, and users.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/wpscan.png)
+
+All the vulnerabilities, require an authenticated user, and we can see that wpscan returns a user:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/wpscan-user.png)
+
+
+
+
 ~~~
 Sources / Links:
 
