@@ -39,8 +39,13 @@ All the vulnerabilities, require an authenticated user, and we can see that wpsc
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/wpscan-user.png)
 
+We can also use wpscan to bruteforce the user:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/wpscan-bruteforce.png)
 
+I'm going to save you some time, the password is not in rockyou... so let's move on.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/wpscan-userforce.png)
 
 ~~~
 Sources / Links:
