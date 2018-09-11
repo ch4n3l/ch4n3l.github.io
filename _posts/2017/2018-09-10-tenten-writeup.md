@@ -136,6 +136,17 @@ After the hash cracks:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/john.png)
 
+Attempting to use the SSH key again, though this time we have the passphrase: `superpassword`
+`Note: Don't forget to set the permissions for your SSH Key`
+~~~
+$ chmod 600 id_rsa
+~~~
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/ssh.png)
+
+We are in!
+
+## iii. Privilege Escalation
 
 ~~~
 Sources / Links:
