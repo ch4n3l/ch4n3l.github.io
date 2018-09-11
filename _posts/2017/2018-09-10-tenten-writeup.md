@@ -167,11 +167,11 @@ The command runs with root privileges!
 
 To get root, we can spawn a new shell using fuckin:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/whoami.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/root.png)
 
 We are now root!
 
-## iv. Conclusion
+## iv.Conclusion
 
 I don't usually like boxes with a lot of CTF (prefer realism), though this box was a lot of fun. I learned some new techniques and tricks, and I liked that you had to think out of the box [no pun intended].
 
