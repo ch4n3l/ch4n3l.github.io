@@ -137,6 +137,7 @@ After the hash cracks:
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/john.png)
 
 Attempting to use the SSH key again, though this time we have the passphrase: `superpassword`
+
 `Note: Don't forget to set the permissions for your SSH Key`
 ~~~
 $ chmod 600 id_rsa
@@ -144,17 +145,45 @@ $ chmod 600 id_rsa
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/ssh.png)
 
-We are in!
-
 ## iii. Privilege Escalation
 
+One of first things I like to do is see what groups the user is part of:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/id.png)
+
+We see that takis is part of the sudo group! To see what commands we can run with sudo, we can use `sudo -l`:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/sudo.png)
+
+We see we can run `fuckin` without a password. To test what the command does, I added random arguments at the end:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/command.png)
+
+By the error, it seems that fuckin is running the argument as a bash command. So let's try:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/whoami.png)
+
+The command runs with root privileges!
+
+To get root, we can spawn a new shell using fuckin:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/whoami.png)
+
+We are now root!
+
+## iv. Conclusion
+
+I don't usually like boxes with a lot of CTF (prefer realism), though this box was a lot of fun. I learned some new techniques and tricks, and I liked that you had to think out of the box [no pun intended].
+
+The box is currently retired on HackTheBox: https://hackthebox.eu
+
+Thanks for reading!
 
 ~~~
 Sources / Links:
 
-[0]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-[1]: https://www.vulnhub.com/entry/goldeneye-1,240/
+[0]: https://vagmour.eu/cve-2015-6668-cv-filename-disclosure-on-job-manager-wordpress-plugin/
+[1]: http://www.cables.ws/cracking-rsa-private-key-passphrase-with-john-the-ripper/
 ~~~
 
 
