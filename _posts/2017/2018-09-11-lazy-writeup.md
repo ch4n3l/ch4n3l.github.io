@@ -25,6 +25,26 @@ Using nmap to scan the ports:
 
 ## ii. Enumeration
 
+Browsing to the host on port 80:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/http.png)
+
+We then register an account, and are automatically logged in:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/slime.png)
+
+If we reload the page and intercept the request with Burp, we see a interesting cookie:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/request.png)
+
+Modifying the cookie and resubmitting the page:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/modify.png)
+
+An interesting error occurs:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/invalid.png)
+
 
 
 ~~~
