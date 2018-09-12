@@ -39,11 +39,35 @@ If we reload the page and intercept the request with Burp, we see a interesting 
 
 Modifying the cookie and resubmitting the page:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/modify.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/modified.png)
 
 An interesting error occurs:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/invalid.png)
+
+Due to the error, we see that the website is vulnerable to an Oracle Padding Attack.
+
+~~~
+For more information on how the attack works:
+https://www.owasp.org/index.php/Testing_for_Padding_Oracle_(OTG-CRYPST-002)
+https://pentesterlab.com/exercises/padding_oracle
+~~~
+
+PadBuster is a tool in which can automate Oracle Padding Attacks.
+
+~~~
+https://github.com/GDSSecurity/PadBuster
+~~~
+
+We can use PadBuster to decrypt the cookie to see the format it is in:
+
+
+Then use Padbuster again to encrypt the cookie in the format we need:
+
+
+
+
+
 
 
 
