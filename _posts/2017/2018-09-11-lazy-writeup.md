@@ -13,13 +13,13 @@ tags:
 	<title> Lazy Writeup | HackTheBox </title>
 </head>
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/logo.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/logo.png)
 
 ## i. Port Scan
 
 Using nmap to scan the ports:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/tenten/portscan.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/portscan.png)
 
 `Ports 80 (http) & 22 (ssh) are open.`
 
