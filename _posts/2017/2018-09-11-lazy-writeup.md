@@ -112,7 +112,7 @@ After enumerating the system, we find some interesting files in mitsos' home dir
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/home.png)
 
-Looking at backup's information, we see that it is a SUID binary (which means whenever a user runs it, it runs as root)
+Looking at backup's information, we see that it is a SUID binary (which means whenever a user runs it, it runs as the owner of the file)
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/backup.png)
 
@@ -169,8 +169,6 @@ When running a file with SUID bits, your EUID becomes the ID of the owner of the
 
 So when we run backup, it will execute cat as root, which in turn will spawn us a shell. Though when a bash shell is spawned it strips the EUID, though SH doesn't.
 
-Which means we will be running the shell as root.
-
 More information:
 https://unix.stackexchange.com/questions/451048/from-which-version-does-bash-drop-privileges
 ~~~
@@ -183,10 +181,19 @@ Now when we execute backup again, we are running it as root, so root executes ou
 
 If we look at our UID we see that we are still the same user, though looking at our EUID we see that we are root.
 
-Now when we run commands, we run them as root:
+Now when running commands, they are ran as root:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/root.png)
 
+## iv. Conclusion
+
+I liked this box a lot. The reason being, is that it's a great box for learning Linux fundamentals. With this box, you learn how SSH keys work, how the Linux PATH works, and how SUID binaries work.
+
+Also there is the Padding Oracle Attack, which might be useful... some day.
+
+Overall, great learning box.
+
+Thanks for reading.
 
 
 
