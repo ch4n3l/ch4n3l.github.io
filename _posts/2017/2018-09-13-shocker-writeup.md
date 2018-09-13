@@ -19,7 +19,7 @@ tags:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/ports.png)
 
-## ii. Enumeration
+## ii. Enumeration / Low Priv Shell
 
 Starting off with http, browsing to host:
 
@@ -68,6 +68,19 @@ https://security.stackexchange.com/questions/68122/what-is-a-specific-example-of
 Using Burp's repeater would make this easier, as we do not have to download the file every time to see the output:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/burp1.png)
+
+The payload that I'm going to be using: 
+~~~
+() { :; }; echo; /bin/ls
+
+If you want to execute another command, make sure you include the full path. ($ which command)
+~~~
+
+This will list the contents in the directory. I'm going to insert the payload into User-Agents. (You can use several HTTP-Headers such as User-Agent, Cookie, Accept, etc.)
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/shellshock.png)
+
+Looking at the response, we see that it prints out the directory contents, which means we have command execution.
 
 
 
