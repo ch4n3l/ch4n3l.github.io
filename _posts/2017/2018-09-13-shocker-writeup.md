@@ -80,7 +80,11 @@ This will list the contents in the directory. I'm going to insert the payload in
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/shellshock.png)
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/response.png)
+
 Looking at the response, we see that it prints out the directory contents, which means we have command execution.
+
+
 
 
 
