@@ -13,7 +13,7 @@ tags:
 	<title> Bank Writeup | HackTheBox </title>
 </head>
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/logo.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/bank/logo.png)
 
 ## i. Port Scan
 
