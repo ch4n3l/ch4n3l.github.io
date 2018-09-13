@@ -98,21 +98,35 @@ Looking at our listener:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/revshell.png)
 
+## iii. Privilege Escalation
 
+While enumerating the system, I checked `sudo -l` to see what commands can be ran as root:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/sudo.png)
 
+We can run perl as root without a password.
 
+Using a perl one-liner to spawn a shell with root privileges.
 
+~~~
+perl —e 'exec "/bin/sh";'
 
+https://netsec.ws/?p=337
+~~~
+You won't see any output at first, but try executing a command.
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/shell.png)
 
+##. iv. Conclusion
 
+This box is great practice for Shellshock. Though, it's hard to find it in the wild nowadays, it's still a good idea to add it to your foundation.
 
 ~~~
 Sources / Links:
-
-[0]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-[1]: https://www.vulnhub.com/entry/blacklight-1,242/
+[0]: https://www.symantec.com/connect/blogs/shellshock-all-you-need-know-about-bash-bug-vulnerability
+[1]: https://security.stackexchange.com/questions/68122/what-is-a-specific-example-of-how-the-shellshock-bash-bug-could-be-exploited
+[2]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+[3]: https://netsec.ws/?p=337
 ~~~
 
 
