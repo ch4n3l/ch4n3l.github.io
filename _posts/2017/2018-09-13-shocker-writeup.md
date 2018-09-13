@@ -10,9 +10,9 @@ tags:
     - hackthebox
 ---
 <head>
-	<title> Shocker Writeup | Vulnhub </title>
+	<title> Shocker Writeup | HackTheBox </title>
 </head>
-<title> Blacklight Writeup </title>
+<title> Shocker Writeup </title>
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/logo.png)
 
 ## i. Port Scan
