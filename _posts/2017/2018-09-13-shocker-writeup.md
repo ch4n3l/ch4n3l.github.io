@@ -115,7 +115,7 @@ https://netsec.ws/?p=337
 ~~~
 You won't see any output at first, but try executing a command.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/shell.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/root.png)
 
 ##. iv. Conclusion
 
