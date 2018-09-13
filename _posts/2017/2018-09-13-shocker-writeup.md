@@ -12,7 +12,7 @@ tags:
 <head>
 	<title> Shocker Writeup | HackTheBox </title>
 </head>
-<title> Shocker Writeup </title>
+
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/shocker/logo.png)
 
 ## i. Port Scan
