@@ -202,19 +202,11 @@ Overall, great learning box.
 
 Thanks for reading.
 
-
-
-
-
-
-
-
-
 ~~~
 Sources / Links:
 
-[0]: https://vagmour.eu/cve-2015-6668-cv-filename-disclosure-on-job-manager-wordpress-plugin/
-[1]: http://www.cables.ws/cracking-rsa-private-key-passphrase-with-john-the-ripper/
+[0]: https://www.owasp.org/index.php/Testing_for_Padding_Oracle_(OTG-CRYPST-002)
+[1]: https://pentesterlab.com/exercises/padding_oracle
 ~~~
 
 
