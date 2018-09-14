@@ -91,7 +91,7 @@ Now you can access your uploaded shell on `http://bank.htb/uploads/shell.htb` an
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/bank/shell.png)
 
-## ii. Privilege Escalation
+## iii. Privilege Escalation
 
 There are two ways to escalate privileges.
 
@@ -143,6 +143,26 @@ Then use wget to download the new passwd file and use the `-O` switch to output 
 Now we can `su` to root with the password we generated.
 
 * A TTY shell must be spawned before using su `python -c 'import pty;pty.spawn("/bin/bash")'`
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/bank/root1.png)
+
+### b. Priv Esc #2
+
+If we look at all the files that contain SUID bits with root permissions:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/bank/suid.png)
+
+`/var/htb/emergency` seems to be a little sketchy.
+
+Running emergency...
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/bank/emergency.png)
+
+We are root!
+
+## iv. Conclusion
+
+I had trouble in the beginning of the box because of the Virtual Hosting. Apart from that this box is great practice to make sure you keep your eyes out and not miss little details.
 
 
 
