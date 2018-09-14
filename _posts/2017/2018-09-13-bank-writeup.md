@@ -172,10 +172,9 @@ I had trouble in the beginning of the box because of the Virtual Hosting. Apart 
 
 ~~~
 Sources / Links:
-[0]: https://www.symantec.com/connect/blogs/shellshock-all-you-need-know-about-bash-bug-vulnerability
-[1]: https://security.stackexchange.com/questions/68122/what-is-a-specific-example-of-how-the-shellshock-bash-bug-could-be-exploited
-[2]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-[3]: https://netsec.ws/?p=337
+[0]: https://httpd.apache.org/docs/trunk/vhosts/examples.html
+[1]: http://pentestmonkey.net/tools/web-shells/php-reverse-shell
+[2]: https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/
 ~~~
 
 
