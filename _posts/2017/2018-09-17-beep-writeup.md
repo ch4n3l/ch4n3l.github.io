@@ -43,7 +43,7 @@ Attempting to use a payload which will print the user if successful:
 
 Looking at the page, it seems that nothing has changed:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/webmin.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/webmin2.png)
 
 Let's try using a blind payload, which does not rely on the output. 
 
@@ -78,18 +78,67 @@ And it looks like we are already root:
 
 ## iii. Root #2
 
+Navigating to port 443 in the browser, we see a login for Elastix:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/elastix.png)
+
+`Trying all the default passwords does not work`
+
+Running a gobust on the host to see if we can find any interesting directories:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/gobuster.png)
+
+After enumerating most of the directories, one stood out: `vtigercrm`:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/vtigercrm.png)
+
+If we look at the footer, we see a version number:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/vtigerversion.png)
+
+Searching for any exploits, one seems to match: 
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/searchsploit.png)
+
+Looks like vTiger is vulnerable to Local File Inclusion, which means we can view files located on the host.
+
+Viewing /etc/passwd, and getting a username: `fanis`
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/passwd.png)
+
+Also in /etc/passwd, we see an entry for `asterisk`
+
+Asterisk is an open source PBX software.
+
+Asterisk has a configuration file located in `/etc/asterisk/manager.conf` which has configuration details such as passwords.
+
+Using the LFI in VTiger to read the asterisk configuration:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/asterisk.png)
+
+The highlighted string contains the username and password.
+
+`admin:jEhdIekWmdjE`
+
+These details can be used for this exploit: https://www.rapid7.com/db/modules/exploit/multi/http/vtiger_soap_upload
+
+Also, while trying password reuse with different users, the asterisk password is the same as root's password:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/beep/root2.png)
 
 
+## iv. Conclusion
 
+I enjoyed this box a lot because there are multiple ways to gain access. I've included most of the ways, but there are a few left. 
+This box is somewhat realistic aswell, because sysadmins can be lazy and reuse the same password multiple times.
 
+Thanks for reading.
 
 
 ~~~
 Sources / Links:
-[0]: https://www.symantec.com/connect/blogs/shellshock-all-you-need-know-about-bash-bug-vulnerability
-[1]: https://security.stackexchange.com/questions/68122/what-is-a-specific-example-of-how-the-shellshock-bash-bug-could-be-exploited
-[2]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-[3]: https://netsec.ws/?p=337
+[0]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+[1]: https://www.asterisk.org/
 ~~~
 
 
