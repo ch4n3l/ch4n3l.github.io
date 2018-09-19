@@ -84,6 +84,26 @@ First switch back to the session, and run `ps` to see available processes:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/granny/processes.png)
 
+The migrate to another process. 
+`Note: the process must have same or lesser privileges. If not, you'll get an error when migrating`
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/granny/migrate.png)
+
+Re-run the exploit as before:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/granny/exploit2.png)
+
+Looking at the UID, we are now `SYSTEM`
+
+## iv. Conclusion
+
+This is a great beginner box into the world of Metasploit.
+
+Thanks for reading.
+
+
+
+
 
 
 
