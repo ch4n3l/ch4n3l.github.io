@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	"Beep Writeup"
-date:	2018-09-13 03:00:00
+date:	2018-09-17 03:00:00
 categories:
     - writeups
 tags:
@@ -109,6 +109,10 @@ Viewing /etc/passwd, and getting a username: `fanis`
 Also in /etc/passwd, we see an entry for `asterisk`
 
 Asterisk is an open source PBX software.
+
+~~~
+https://www.asterisk.org/
+~~~
 
 Asterisk has a configuration file located in `/etc/asterisk/manager.conf` which has configuration details such as passwords.
 
