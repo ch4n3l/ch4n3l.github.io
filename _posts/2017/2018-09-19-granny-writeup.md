@@ -82,7 +82,7 @@ The error can be fixed by migrating the process.
 
 First switch back to the session, and run `ps` to see available processes:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/granny/process.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/granny/processes.png)
 
 
 
