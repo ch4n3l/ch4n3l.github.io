@@ -104,28 +104,9 @@ This is a great beginner box into the world of Metasploit.
 Thanks for reading.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ~~~
 Sources / Links:
-[0]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-[1]: https://www.asterisk.org/
+[0]: https://serverfault.com/questions/217654/difference-between-nt-authority-network-service-and-nt-authority-system
 ~~~
 
 
