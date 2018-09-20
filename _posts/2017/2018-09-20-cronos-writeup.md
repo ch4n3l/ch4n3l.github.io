@@ -131,7 +131,7 @@ Waiting a couple of seconds, and looking at our listener:
 
 ## iv. Conclusion
 
-I really like how this box uses DNS and Virtual Hosting. Not too many boxes use DNS, so this was a great refresher/practice. 
+This box was a great refresher/practice for DNS.
 
 Thanks for reading.
 
