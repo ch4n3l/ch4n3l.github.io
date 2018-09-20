@@ -97,6 +97,17 @@ Looking at our listener:
 
 ## iii. Privilege Escalation
 
+Based off the name of the machine, and after not having much luck enumerating, let's focus on cron.
+
+Viewing `/etc/crontab`:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/crontab1.png)
+
+The last line seems interesting... seems like artisan is being executed by root.
+
+Let's look at the permissions of `/var/www/laravel/artisan`:
+
+
 
 
 
