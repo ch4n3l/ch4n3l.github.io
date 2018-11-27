@@ -30,7 +30,6 @@ Scrolling further down on the page, there is a note:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/fowsniff/note.png)
 
-Which is really cool since in most Vulnhubs/HTB they don't seem to break the fourth wall.
 
 Finding the fowsniff twitter (@fowsniffcorp), there is a stickied tweet:
 
@@ -40,7 +39,7 @@ Following the Pastebin link, we can see that there was a data breach, and the pa
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/fowsniff/passwords.png)
 
-The passwords are in MD5 format, either using hashkiller (https://hashkiller.co.uk/md5-decrypter.aspx) or hashcat we can decrypt the passwords:
+The passwords are in MD5 format, either using hashkiller (`https://hashkiller.co.uk/md5-decrypter.aspx`) or hashcat we can decrypt the passwords:
 
 ~~~
  8a28a94a588a95b80163709ab4313aa4 MD5 : mailcall
@@ -65,7 +64,7 @@ And the passwords in another file:
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/fowsniff/pass.png)
 
 ```
-The reason I am not trying them one by one because that might take a while especially with pop3, and maybe another user has the same password, it doesn't hurt to bruteforce them all.
+It takes a while to try every single username & password due to the way you have to authenticate with POP3. So it is easier & faster to just bruteforce.
 ```
 
 Starting hydra:
@@ -107,7 +106,7 @@ Hmm... if we look at the e-mail again, we can see this email was sent to multipl
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/fowsniff/multipleusers.png)
 
-So we can use hydra with our username wordlist earlier and the new password to see if we can find any valid users!
+So we can use hydra with our username wordlist earlier and the new password to see if we can find any valid users.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/fowsniff/hydrassh.png)
 
@@ -196,7 +195,8 @@ Overall, this box was really enjoyable, try it here yourself: https://www.vulnhu
 Sources/Links:
 ~~~
 [0]: https://tools.kali.org/password-attacks/hydra
-[1]: https://www.networkworld.com/article/3219736/linux/how-to-use-the-motd-file-to-get-linux-users-to-pay-attention.html
+[1]: https://hashkiller.co.uk/md5-decrypter.aspx
+[2]: https://www.networkworld.com/article/3219736/linux/how-to-use-the-motd-file-to-get-linux-users-to-pay-attention.html
 [2]: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 ~~~
 
