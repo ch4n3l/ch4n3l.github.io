@@ -4,7 +4,7 @@ layout: content
 <head>
     <title> home </title>
 </head>
-<center>chan3l@null:~/research# cat manifesto</center>
+<center>mqt@null:~/research# cat manifesto</center>
 <br>
 <pre>
              *     ,MMM8&&&.            *
@@ -14,7 +14,7 @@ layout: content
                  MMM88&&&&&&&&
                  'MMM88&&&&&&'
                    'MMM8&&&'      *   A growing collection of notes and writeups as I continue 
-                                                           my journey. ~ <span>ch4n3l</span>
+                                                           my journey. ~ <span>mqt</span>
           |\___/|                                       
           )     (             .              '
          =\     /=
