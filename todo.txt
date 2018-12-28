@@ -1,0 +1,7 @@
+~ write a post about ZeusCart 4.0 CSRF 
+
+~ blog on some attackdefense challenges? [such as mybb LFI, basic stuff, etc]
+
+~ writeup some vulnhubs / htb machines
+
+
