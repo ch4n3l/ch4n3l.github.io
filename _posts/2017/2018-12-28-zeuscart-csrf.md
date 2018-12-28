@@ -69,3 +69,16 @@ Here it is in action:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/csrf.gif)
 
+## Exploit-DB Writeup: https://www.exploit-db.com/exploits/46027
+
+# iv. Conclusion
+
+In conclusion, Zeus Cart is a great way to practice hunting, and building your foundation. Though keep in mind, the software is reaching it's sixth year since it has last been updated. Which means today, applications are more secure as new techniques and methods have been developed. With all that in mind, developers tend to make mistakes and overlook certain functions of an application. Even today the same bugs found in this six year old software, are found on some of the biggest websites.
+
+
+Thank you for reading.
+
+~~~
+Sources:
+https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
+~~~
