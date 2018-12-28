@@ -42,7 +42,7 @@ When clicking the "Active" button under the Status column, and intercepting the 
 
 It is sending a GET request to disable an account with the ID of 1. Which we can infer is the first customer registered in the database.
 
-As you may notice, in the request there is no where that validates any sort of tokens.
+As you may notice, in the request there is no parameter that validates any sort of tokens.
 
 To abuse this, an attacker can create an HTML page that looks blank, but when the admin clicks on the page, it will send a GET request which in turn will deactivate an account.
 
