@@ -26,7 +26,7 @@ Once a customer account is disabled, it tells the customer that they have an inv
 
 According to OWASP, Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated.
 
-In basic terms, once an application has a cookie set in the user's browser, the browser will automatically submit the cookie to the applicatoin in every request. Which means if an attacker creates a HTML form that is auto submitted when a user clicks on it, they will be  to submit actions on behalf of the user.
+In basic terms, once an application has a cookie set in the user's browser, the browser will automatically submit the cookie to the applicatoin in every request. Which means if an attacker creates a HTML form that is auto submitted when a user clicks on it, they will be able to submit actions on behalf of the user.
 
 To prevent CSRF, an application can use tokens. The application will issue a token on every action in the request. The token usually lives in a hidden input in the HTML. Therefore when the user submits a form, the application makes sure the token matches what was issued on the HTML.
 
@@ -69,7 +69,7 @@ Here it is in action:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/csrf.gif)
 
-## Exploit-DB Writeup: https://www.exploit-db.com/exploits/46027
+## https://www.exploit-db.com/exploits/46027
 
 # iv. Conclusion
 
