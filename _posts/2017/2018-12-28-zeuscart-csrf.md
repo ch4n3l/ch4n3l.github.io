@@ -65,3 +65,7 @@ PoC.html:
 </html>
 ~~~
 
+Here it is in action:
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/csrf.gif)
+
