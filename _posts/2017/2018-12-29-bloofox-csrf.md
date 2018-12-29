@@ -1,7 +1,7 @@
 ---
 layout: post
-title:	"Zeus Cart 4.0 CSRF Deactivate Customer Accounts"
-date:	2018-19-28 03:00:00
+title:	"Bloofox CMS 0.5.0 CSRF Change Administrator Password"
+date:	2018-12-28 03:00:00
 categories:
     - notes
 tags:
