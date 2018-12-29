@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	"Bloofox CMS 0.5.0 CSRF Change Administrator Password"
-date:	2018-12-28 03:00:00
+date:	2018-12-29 03:00:00
 categories:
     - notes
 tags:
