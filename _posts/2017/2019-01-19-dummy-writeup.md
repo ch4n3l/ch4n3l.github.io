@@ -57,7 +57,14 @@ Checking to see which user Icecast was running under... it was Administrator.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/admin.png)
 
-##iii. Conclusion
+The attack on this box can have been prevented in two ways:
+
+~~~
+	a. Make sure to routinely patch, and keep software updated
+	b. Do not run software under a high privilee account, use a separate service account if needed.
+~~~
+
+## iii. Conclusion
 
 Dummy is a good beginner box. It shows the importance of fingerprinting software, and knowing which exploits to use.
 
