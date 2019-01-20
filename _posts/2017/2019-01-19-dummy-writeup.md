@@ -58,22 +58,22 @@ Checking to see which user Icecast was running under... it was Administrator.
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/administrator.png)
 
 The attack on this box can have been prevented in two ways:
+~~~
+	a. Make sure to routinely patch, and keep software updated
+	b. Do not run software under a high privileged account, make a separate service account if needed.
+~~~
 
-	*⋅⋅⋅Make sure to routinely patch, and keep software updated
-	*⋅⋅⋅Do not run software under a high privileged account, make a separate service account if needed.
+##iii. Conclusion
 
+Dummy is a good beginner box. It shows the importance of fingerprinting software, and knowing which exploits to use.
 
-##iii.. Conclusion
+If you would like to try Dummy & other OSCP-like boxes, try it on Wizard-Labs: http://labs.wizard-security.net/
 
-lorum ipsum
-
+Thank you for reading.
 
 Sources/Links:
 ~~~
-[0]: 3
-[1]: a
-[2]: 3
-[3]: 1
+[0]: http://labs.wizard-security.net/
 ~~~
 
 
