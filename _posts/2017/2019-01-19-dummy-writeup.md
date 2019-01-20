@@ -68,7 +68,7 @@ b. Do not run software under a high privileged account, make a separate service 
 
 Dummy is a good beginner box. It shows the importance of fingerprinting software, and knowing which exploits to use.
 
-If you would like to try Dummy & other OSCP-like boxes, try it on Wizard-Labs: http://labs.wizard-security.net/
+If you would like to try Dummy & other OSCP-like boxes, try it on **Wizard-Labs**: http://labs.wizard-security.net/
 
 Thank you for reading.
 
