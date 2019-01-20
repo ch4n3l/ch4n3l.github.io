@@ -12,7 +12,7 @@ tags:
 <head>
 	<title> Dummy Writeup | Wizard-Labs </title>
 </head>
-![Screenshot]({{ site.baseurl }}/images/posts/2017/fowsniff/logo.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/logo.png)
 
 ## i. Port Scan
 
