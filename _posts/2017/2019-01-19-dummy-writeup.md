@@ -55,9 +55,10 @@ Module: https://www.rapid7.com/db/modules/exploit/windows/http/icecast_header
 
 Checking to see which user Icecast was running under... it was Administrator.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/administrator.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/admin.png)
 
 The attack on this box can have been prevented in two ways:
+
 ~~~
 	a. Make sure to routinely patch, and keep software updated
 	b. Do not run software under a high privileged account, make a separate service account if needed.
