@@ -27,7 +27,6 @@ First, we can start off by listing the SMB shares to see if there is anything in
 Seems like guests are not allowed to view shares...
 
 
-
 Moving onto the next port... 8000.
 
 Nmap's service detection shows that the service is `Icecast streaming media server`.
@@ -46,29 +45,25 @@ With the information in mind, we can use searchsploit to see if there are any Ic
 
 As we do not know the version number, we will have to guess. Though looking at the exploits, the only ones that look viable are remote code execution.
 
+We can use **Metasploit** to gain command execution:
 
-#a. Metasploit
-
+~~~
 Module: https://www.rapid7.com/db/modules/exploit/windows/http/icecast_header
+~~~
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/msf.png)
 
+Checking to see which user Icecast was running under... it was Administrator.
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/administrator.png)
+
+The attack on this box can have been prevented in two ways:
+
+	*⋅⋅⋅Make sure to routinely patch, and keep software updated
+	*⋅⋅⋅Do not run software under a high privileged account, make a separate service account if needed.
 
 
-#b. Manual
-
-laskdfjlasdfkjlasdfjlaksdjflasfjlksjf
-
-
-
-
-
-
-##iii. Privilege Escalation
-
-ipsum
-
-##iv. Conclusion
+##iii.. Conclusion
 
 lorum ipsum
 
