@@ -26,11 +26,13 @@ First, we can start off by listing the SMB shares to see if there is anything in
 
 Seems like guests are not allowed to view shares...
 
+
+
 Moving onto the next port... 8000.
 
 Nmap's service detection shows that the service is `Icecast streaming media server`.
 
-Visiting port 8000 in the browser:
+To confirm that the service is indeed Icecast, we can visit port 8000 in the browser:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/error.png)
 
@@ -41,6 +43,25 @@ If you google the error, you will see Icecast help forums pop up.
 With the information in mind, we can use searchsploit to see if there are any Icecast exploits.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/searchsploit.png)
+
+As we do not know the version number, we will have to guess. Though looking at the exploits, the only ones that look viable are remote code execution.
+
+
+#a. Metasploit
+
+Module: https://www.rapid7.com/db/modules/exploit/windows/http/icecast_header
+
+![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/msf.png)
+
+
+
+#b. Manual
+
+laskdfjlasdfkjlasdfjlaksdjflasfjlksjf
+
+
+
+
 
 
 ##iii. Privilege Escalation
