@@ -43,9 +43,9 @@ With the information in mind, we can use searchsploit to see if there are any Ic
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/searchsploit.png)
 
-As we do not know the version number, we will have to guess. Though looking at the exploits, the only ones that look viable are remote code execution.
+As we do not know the version number, we will have to guess. Though looking at the exploits, the only ones that look interesting are the remote code execution.
 
-We can use **Metasploit** to gain command execution:
+We can use `Metasploit` to gain command execution:
 
 ~~~
 Module: https://www.rapid7.com/db/modules/exploit/windows/http/icecast_header
@@ -60,8 +60,8 @@ Checking to see which user Icecast was running under... it was Administrator.
 The attack on this box can have been prevented in two ways:
 
 ~~~
-	a. Make sure to routinely patch, and keep software updated
-	b. Do not run software under a high privilee account, use a separate service account if needed.
+a. Make sure to routinely patch, and keep software updated
+b. Do not run software under a high privileged account, make a separate service account if needed.
 ~~~
 
 ## iii. Conclusion
