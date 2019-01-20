@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	"Dummy Writeup | Wizard-Labs"
-date:	2018-11-27 03:00:00
+date:	2019-01-20 03:00:00
 categories:
     - writeups
 tags:
@@ -12,7 +12,7 @@ tags:
 <head>
 	<title> Dummy Writeup | Wizard-Labs </title>
 </head>
-![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/logo.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/dummy/logo.jpg)
 
 ## i. Port Scan
 
