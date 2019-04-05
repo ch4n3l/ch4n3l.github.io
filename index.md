@@ -2,7 +2,7 @@
 layout: content
 ---
 <head>
-    <title> home </title>
+    <title> homeqt3.14 </title>
 </head>
 <center>mqt@null:~/research# cat manifesto</center>
 <br>
