@@ -1,6 +1,6 @@
 ---
 layout: post
-title:	"Zeus Cart 4.0 CSRF Deactivate Customer Accounts"
+title:	"DownNotifier SSRF"
 date:	2018-12-28 03:00:00
 categories:
     - notes
@@ -9,26 +9,17 @@ tags:
     - vuln_writeup
 ---
 <head>
-	<title> Zeus Cart 4.0 CSRF Deactivate Customer Accounts </title>
+	<title> downnotifer.com SSRF Bug Writeup </title>
 </head>
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/logo.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/logo.gif)
 
 
 # i. Introduction
-
-Zeus Cart in general, is a PHP Shopping Cart. As of today, ZeusCart is nearly five years old, though it is still a great application for learning how to find bugs.
-
-As with many shopping cart software, Zeus Cart is riddled with bugs. While practicing my bug hunting technique, I managed to find a CSRF, which allowed an attacker to disable customer accounts.
-
-Once a customer account is disabled, it tells the customer that they have an invalid password, instead of letting them know they were banned.
+dflkasdfjlaskdfjlksdfasdf
 
 # ii. Summary
 
-According to OWASP, Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated.
-
-In basic terms, once an application has a cookie set in the user's browser, the browser will automatically submit the cookie to the applicatoin in every request. Which means if an attacker creates a HTML form that is auto submitted when a user clicks on it, they will be able to submit actions on behalf of the user.
-
-To prevent CSRF, an application can use tokens. The application will issue a token on every action in the request. The token usually lives in a hidden input in the HTML. Therefore when the user submits a form, the application makes sure the token matches what was issued on the HTML.
+dsfsadlfkjasldkfjasldkfjdsf
 
 # iii. Exploiting Zeus Cart
 
