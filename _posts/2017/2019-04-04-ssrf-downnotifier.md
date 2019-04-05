@@ -3,7 +3,7 @@ layout: post
 title:	"downnotifier.com SSRF Writeup"
 date:	2019-04-04 03:00:00
 categories:
-    - notes
+    - writeups
 tags:
     - bug_hunting
     - bounty_writeup
