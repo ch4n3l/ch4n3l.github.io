@@ -37,9 +37,10 @@ Using XSPA, you can either use response times, response output to fingerprint if
 
 # iii. Exploiting XSPA to Enumerate Local Services
 
-Once in the admin panel, under Customers, we are able to see all the registered customers.
+Luckily for us, due to the type of application logic `downnotifier` was using, it was a lot easier for us to perform an XSPA attack.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/customers.png)
+When browsing to `downnotifier` we are greeted with:
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/index.png)
 
 When clicking the "Active" button under the Status column, and intercepting the request we can see:
 
