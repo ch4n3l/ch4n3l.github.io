@@ -26,9 +26,16 @@ So in mind came SSRF.
 
 # ii. SSRF Explanation
 
-dsfsadlfkjasldkfjasldkfjdsf
+SSRF, sometimes prounced *Surf*, stands for Server Side Request Forgery. 
 
-# iii. 
+Essentially, with SSRF you are technically able to send requests originating from the server, which you can then leverage and use to read local files, or even enumerate services on the system.
+
+Within SSRF, an exists subattack you can perform which is known as XSPA *(Cross Site Port Attack)*
+
+Using XSPA, you can either use response times, response output to fingerprint if local services are running on the server such as `ftp, mysql`
+
+
+# iii. Exploiting XSPA to Enumerate Local Services
 
 Once in the admin panel, under Customers, we are able to see all the registered customers.
 
