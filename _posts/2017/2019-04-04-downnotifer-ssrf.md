@@ -1,27 +1,34 @@
 ---
 layout: post
 title:	"DownNotifier SSRF"
-date:	2018-12-28 03:00:00
+date:	2019-04-04 03:00:00
 categories:
     - notes
 tags:
     - bug_hunting
-    - vuln_writeup
+    - bug_writeup
+    - openbugbounty
 ---
 <head>
 	<title> downnotifer.com SSRF Bug Writeup </title>
 </head>
-![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/logo.gif)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/logo.gif =250x250)
 
 
 # i. Introduction
-dflkasdfjlaskdfjlksdfasdf
+DownNotifier has an open bug bounty progam hosted on `https://openbugbounty.org`.
 
-# ii. Summary
+DownNotifier periodically scans your websites and notifies you if your website has gone down.
+
+With that in mind, I thought of some bugs that would work with this sort of lksadfal;skdfdls.
+
+So in mind came SSRF.
+
+# ii. SSRF Explanation
 
 dsfsadlfkjasldkfjasldkfjdsf
 
-# iii. Exploiting Zeus Cart
+# iii. 
 
 Once in the admin panel, under Customers, we are able to see all the registered customers.
 
