@@ -40,44 +40,49 @@ Using XSPA, you can either use response times, response output to fingerprint if
 Luckily for us, due to the type of application logic `downnotifier` was using, it was a lot easier for us to perform an XSPA attack.
 
 When browsing to `downnotifier` we are greeted with:
+
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/index.png)
 
-When clicking the "Active" button under the Status column, and intercepting the request we can see:
+Trying usual loopback addresses like `localhost` and `127.0.0.1` does not seem to work too well:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/request.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/localhost.png)
 
-It is sending a GET request to disable an account with the ID of 1. Which we can infer is the first customer registered in the database.
+Also trying to grab files using `file://` turned out as expected:
 
-As you may notice, in the request there is no parameter that validates any sort of tokens.
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/file.png)
 
-To abuse this, an attacker can create an HTML page that looks blank, but when the admin clicks on the page, it will send a GET request which in turn will deactivate an account.
+I tried some more payloads I found from `PayloadAllThings` SSRF payload page and found that `0.0.0.0` seemed to be accepted.
+~~~
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery
+~~~
 
-From what seems a blank page, there is actually a request going on in the background.
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/accepted.png)
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/blank.png)
+Though, even if it bypassed the filter, will it still work?
 
-We can see what's going on by viewing the source.
+To see if it would, I added some common ports.
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/source.png)
+30 seconds later, we can see that we indeed did get an SSRF and were able to perform an XSPA to enumerate local services. 
 
-As we can see, the page create a request by trying to fetch an image, and executes the request in the background.
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/proof.png)
 
-You can view the PoC on: https://www.exploit-db.com/exploits/46027
+`ftp` is running.
 
-Here it is in action:
-
-![Screenshot]({{ site.baseurl }}/images/posts/2017/zeus-cart/csrf.gif)
-
-## https://www.exploit-db.com/exploits/46027
 
 # iv. Conclusion
 
-In conclusion, Zeus Cart is a great way to practice hunting, and building your foundation. Though keep in mind, the software is reaching it's sixth year since it has last been updated. Which means today, applications are more secure as new techniques and methods have been developed. With all that in mind, developers tend to make mistakes and overlook certain functions of an application. Even today the same bugs found in this six year old software, are found on some of the biggest websites.
+I reported the report to `DownNotifier` and they responded in less than 24 hours with a patch.
 
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/email.png)
 
-Thank you for reading.
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/acknowledgement.png)
+
+I would like to thank `DownNotifier` for the acknowledgement and the quick patch.
+
+Thank you for reading,
+- mqt
 
 ~~~
 Sources:
-https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server Side Request Forgery
 ~~~
