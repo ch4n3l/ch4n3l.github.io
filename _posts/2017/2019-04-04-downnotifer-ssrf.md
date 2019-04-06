@@ -30,16 +30,12 @@ SSRF, sometimes prounced *Surf*, stands for Server Side Request Forgery.
 
 Essentially, with SSRF you are able to send requests originating from the web-server, in which you can leverage to read local files, or even enumerate services on the local system.
 
-Within SSRF, an exists subattack you can perform which is known as XSPA *(Cross Site Port Attack)*
+Within SSRF,  exists a subattack you can perform which is known as XSPA *(Cross Site Port Attack)*
 
-Using XSPA, you can either use response times, response output to fingerprint if local services are running on the server such as `ftp, mysql, redis`
-
-A great source to read about `SSRF` and ever
+With `XSPA`, you can use server output (which was easier for us in this case), or server response times to fingerprint if local services are running on the server such as `ftp, mysql, redis`
 
 
 # iii. Exploiting XSPA to Enumerate Local Services
-
-Luckily for us, due to the type of application logic `DownNotifier` was using, it was a lot easier for us to perform an XSPA attack.
 
 When browsing to `downnotifier` we are greeted with:
 
@@ -71,7 +67,7 @@ To see if it would, I added some common ports.
 
 # iv. Conclusion
 
-I reported the report to `DownNotifier` and they responded in less than 24 hours with a patch.
+I reported the bug to `DownNotifier` and within 24 hour hours there was a response & a patch.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/email.png)
 
