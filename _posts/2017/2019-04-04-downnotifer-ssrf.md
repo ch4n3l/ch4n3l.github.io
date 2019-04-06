@@ -28,11 +28,13 @@ So in mind came `SSRF`.
 
 SSRF, sometimes prounced *Surf*, stands for Server Side Request Forgery. 
 
-Essentially, with SSRF you are able to send requests originating from the web-server, in which you can leverage to read local files, or even enumerate services on the system.
+Essentially, with SSRF you are able to send requests originating from the web-server, in which you can leverage to read local files, or even enumerate services on the local system.
 
 Within SSRF, an exists subattack you can perform which is known as XSPA *(Cross Site Port Attack)*
 
 Using XSPA, you can either use response times, response output to fingerprint if local services are running on the server such as `ftp, mysql, redis`
+
+A great source to read about `SSRF` and ever
 
 
 # iii. Exploiting XSPA to Enumerate Local Services
@@ -66,7 +68,7 @@ To see if it would, I added some common ports.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/proof.png)
 
-`ftp` is running.
+`ftp` and `http` are running.
 
 
 # iv. Conclusion
