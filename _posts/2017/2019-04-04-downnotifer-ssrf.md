@@ -58,13 +58,11 @@ I tried some more payloads I found from `PayloadAllThings` SSRF payload page and
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery
 ~~~
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/accepted.png)
-
 Though, even if it bypassed the filter, will it still work?
 
 To see if it would, I added some common ports.
 
-30 seconds later, we can see that we indeed did get an SSRF and were able to perform an XSPA to enumerate local services. 
+30 seconds later, we can see that we indeed did get an SSRF and were able to enumerate local services.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/proof.png)
 
