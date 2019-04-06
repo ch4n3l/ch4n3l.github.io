@@ -12,7 +12,7 @@ tags:
 <head>
 	<title> downnotifer.com SSRF Bug Writeup </title>
 </head>
-![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/logo.gif =250x250)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/downssrf/logo.png)
 
 
 # i. Introduction
