@@ -18,26 +18,26 @@ tags:
 # i. Introduction
 DownNotifier has an open bug bounty progam hosted on `https://openbugbounty.org`.
 
-DownNotifier periodically scans your websites and notifies you if your website has gone down.
+DownNotifie is a service which periodically scans your websites and notifies you if your website has gone down.
 
-With that in mind, I thought of some bugs that would work with this sort of lksadfal;skdfdls.
+Due to the nature of the website and the service it provides, I thought about some application logic bugs which might work, 
 
-So in mind came SSRF.
+So in mind came `SSRF`.
 
 # ii. SSRF Explanation
 
 SSRF, sometimes prounced *Surf*, stands for Server Side Request Forgery. 
 
-Essentially, with SSRF you are technically able to send requests originating from the server, which you can then leverage and use to read local files, or even enumerate services on the system.
+Essentially, with SSRF you are able to send requests originating from the web-server, in which you can leverage to read local files, or even enumerate services on the system.
 
 Within SSRF, an exists subattack you can perform which is known as XSPA *(Cross Site Port Attack)*
 
-Using XSPA, you can either use response times, response output to fingerprint if local services are running on the server such as `ftp, mysql`
+Using XSPA, you can either use response times, response output to fingerprint if local services are running on the server such as `ftp, mysql, redis`
 
 
 # iii. Exploiting XSPA to Enumerate Local Services
 
-Luckily for us, due to the type of application logic `downnotifier` was using, it was a lot easier for us to perform an XSPA attack.
+Luckily for us, due to the type of application logic `DownNotifier` was using, it was a lot easier for us to perform an XSPA attack.
 
 When browsing to `downnotifier` we are greeted with:
 
