@@ -6,6 +6,18 @@ permalink: /notes/
 <head>
     <title> notes </title>
 </head>
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2">
+    <div class="menu">
+      <ul>
+          <li><a href="{{ site.baseurl }}/">home</a></li>
+          <li><a href="{{ site.baseurl }}/notes">notes</a></li>
+          <li><a href="{{ site.baseurl }}/writeups">writeups</a></li>
+          <li><a href="{{https://www.google.com}/oscp-notes">oscp-notes</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 <ul class="posts">
     {% for post in site.categories.notes %}
         <li>
