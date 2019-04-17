@@ -1,10 +1,10 @@
 ---
 layout: blog
-title: "writeups"
+title: "box_writeups"
 permalink: /writeups/
 ---
 <head>
-    <title> writeups </title>
+    <title> box_writeups </title>
 </head>
 <ul class="posts">
     {% for post in site.categories.writeups %}
