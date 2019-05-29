@@ -54,10 +54,18 @@ In short, in order to perform any sensitive action in the myBB Admin Panel, ther
 Here is a video proof of concept demonstrating it in action:
 [video poc]
 
+You can find this script and more powerful scripts on the `weaponised-XSS-payloads` repo which can be found here: https://github.com/hakluke/weaponised-XSS-payloads
+
 # iii. Conclusion
 
-[note about xss]
+What really made this concept interesting to me was that whenever people hear XSS, the first thing that pops into mind is cookie stealing. While cookie stealing can be very powerful, there are some downsides. One major downside occurs in stored XSS. In stored XSS, it is hard to gauge whenever the payload will execute. In a lot of cases, by the time the payload executes and you receive the cookie, the session is expired by then. However using a script like this, you can ensure that you have some form of xxx.
 
 
-As always, thank you for reading,
+As always, thank you for reading.
 - mqt
+
+Sources:
+~~~
+https://medium.com/@hakluke/upgrade-xss-from-medium-to-critical-cb96597b6cc4
+~~~
+
