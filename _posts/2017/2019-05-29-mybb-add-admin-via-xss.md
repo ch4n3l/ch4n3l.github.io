@@ -58,8 +58,9 @@ You can find this script and more powerful scripts on the `weaponised-XSS-payloa
 
 # iii. Conclusion
 
-What really made this concept interesting to me was that whenever people hear XSS, the first thing that pops into mind is cookie stealing. While cookie stealing can be very powerful, there are some downsides. One major downside occurs in stored XSS. In stored XSS, it is hard to gauge whenever the payload will execute. In a lot of cases, by the time the payload executes and you receive the cookie, the session is expired by then. However using a script like this, you can ensure that you have some form of xxx.
+What really made this concept interesting to me was that whenever people hear XSS, the first thing that pops into mind is cookie stealing. While cookie stealing can be very powerful, there are some downsides. One major downside occurs in stored XSS. In stored XSS, it is hard to gauge whenever the payload will execute. In a lot of cases, by the time the payload executes and you receive the cookie, the session is expired by then. However using a script like this, you can ensure that you have some form of persistence.
 
+Once again, all credit goes to [hakluke](https://twitter.com/hakluke) and their wonderful blog post.
 
 As always, thank you for reading.
 - mqt
