@@ -52,7 +52,7 @@ In short, in order to perform any sensitive action in the myBB Admin Panel, ther
 
 
 Here is a video proof of concept demonstrating it in action:
-[video poc]
+[![Little red ridning hood](http://i.imgur.com/7YTMFQp.png)](https://vimeo.com/3514904 "Little red riding hood - Click to Watch!")
 
 You can find this script and more powerful scripts on the `weaponised-XSS-payloads` repo which can be found here: https://github.com/hakluke/weaponised-XSS-payloads
 
