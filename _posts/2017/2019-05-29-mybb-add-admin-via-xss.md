@@ -7,7 +7,6 @@ categories:
 tags:
     - bug_hunting
     - bug_writeup
-    - openbugbounty
 ---
 <head>
 	<title> myBB - Add Administrator via XSS </title>
@@ -15,7 +14,7 @@ tags:
 
 
 # i. Introduction
-While browsing Twitter, I happened to come upon [hakluke]'s(https://twitter.com/hakluke) blog post about upgrading an XSS from a medium to a critical bug. Long story short it detailed on how an XSS is able to bypass most CSRF protection mechanisms, and completely bypassing the Same Origin Policy. The most popular anti-CSRF mechanism are CSRF tokens. However, Javascript is able to request the form, parse the token, and then send it along with the subsequent request to perform a sensitive action. 
+While browsing Twitter, I happened to come upon [hakluke's](https://twitter.com/hakluke) blog post about upgrading an XSS from a medium to a critical bug. Long story short it detailed on how an XSS is able to bypass most CSRF protection mechanisms, and completely bypassing the Same Origin Policy. The most popular anti-CSRF mechanism are CSRF tokens. However, Javascript is able to request the form, parse the token, and then send it along with the subsequent request to perform a sensitive action. 
 
 If you would like to read more about how this works, I highly recommend reading hakluke's blog post which can be found here: https://medium.com/@hakluke/upgrade-xss-from-medium-to-critical-cb96597b6cc4
 
