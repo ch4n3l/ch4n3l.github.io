@@ -48,11 +48,12 @@ req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 req.send(params);
 ~~~ 
 
-In short, in order to perform any sensitive action in the myBB Admin Panel, there is a token that is required which is called `my_post_key`. The following script sends a request to the myBB Admin Panel (which seems to have a lifespan of 30 minutes before asking the user to reauthenticate), retrieves the source and parses it looking for `my_post_key`. Once it finishes, it sends a subsequent request to add a user to the Administrator group with the username as hacker and password as hacker12345.
+In short, in order to perform any sensitive action in the myBB Admin Panel, there is a token that is required which is called `my_post_key`. The following script sends a request to the myBB Admin Panel (which seems to have a lifespan of 30 minutes before asking the user to reauthenticate), retrieves the source and parses it looking for my_post_key. Once it finishes, it sends a subsequent request to add a user to the Administrator group with the username as hacker and password as hacker12345.
 
 
 Here is a video proof of concept demonstrating it in action:
-[![Little red ridning hood](http://i.imgur.com/7YTMFQp.png)](https://vimeo.com/3514904 "Little red riding hood - Click to Watch!")
+
+[![mybb XSS - Add Administrator]({{ site.baseurl }}/images/posts/2017/mybb-add-admin/video-preview.png)](https://vimeo.com/339213610 "myBB XSS - Add Administrator")
 
 You can find this script and more powerful scripts on the `weaponised-XSS-payloads` repo which can be found here: https://github.com/hakluke/weaponised-XSS-payloads
 
@@ -63,7 +64,7 @@ What really made this concept interesting to me was that whenever people hear XS
 Once again, all credit goes to [hakluke](https://twitter.com/hakluke) and their wonderful blog post.
 
 As always, thank you for reading.
-- mqt
+\- mqt
 
 Sources:
 ~~~
