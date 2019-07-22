@@ -14,6 +14,8 @@ tags:
 
 
 # i. Introduction
+In this post, I will detail my adventure of finding a bug with very low impact, and being able to leverage it into what essentially is an Application Takeover.
+
 While hunting around on the application, I found a section where you can create users. After playing around, I noticed that when the registration would fail due to errors in the form such as a invalid username, too short password, etc, the username that you were trying to register would reflect on the error page.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/fail.png)
@@ -111,9 +113,4 @@ This was a great experience, and I've learned a lot. Remember when you have one 
 As always, thank you for reading.
 
 \- mqt
-
-Sources:
-~~~
-test
-~~~
 
