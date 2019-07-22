@@ -27,7 +27,7 @@ However, this would be considered to be a `Self-XSS` which has very low impact a
 
 # ii. Chaining CSRF with XSS
 
-Feeling a little defeated, I thought of some ways I could leverage this XSS into something bigger. While doing some more testing, I noticed that the endpoint which is responsible for creating the user did not have any CSRF protection. This gave me an idea to try to chain xyzxyzxyz
+Feeling a little defeated, I thought of some ways I could leverage this XSS into something bigger. While doing some more testing, I noticed that the endpoint which is responsible for creating the user did not have any CSRF protection. This gave me an idea to try to chain the Self-XSS with the CSRF to hopefully obtain remote exploitation.
 
 Here is an example of how the request looks like:
 
@@ -64,7 +64,7 @@ With that in mind, I set off to find a way to be able to takeover the applicatio
 
 I then wrote simple Javascript, when called will create a new user and then promote the user. This is able to bypass SOP, as the request will be called from the application. Furthermore this is also able to bypass the CSRF protection when promoting a user to the administrator as we can create an XMLHTTPRequest to parse the CSRF token and then include it with our subsequent request.
 
-If you host the following Javascript on your site:
+Host the following Javascript on your site:
 ~~~
 var root = "";
 var req = new XMLHttpRequest();
@@ -105,6 +105,8 @@ So essentially with a Self-XSS and some creative thinking we were able to takeov
 
 
 # iv. Conclusion
+
+This was a great experience, and I've learned a lot. Remember when you have one piece of the puzzle, there are always ways to be able to leverage it into something bigger & greater. What normally would be treated as an informational bug, is able to be leveraged into something that can takeover the application.
 
 As always, thank you for reading.
 
