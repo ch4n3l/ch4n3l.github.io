@@ -13,6 +13,12 @@ tags:
 </head>
 
 
+<h2>CVE-2019-14228</h2>
+~~~
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14228
+~~~
+
+
 # i. Introduction
 In this post, I will detail my adventure of finding a bug with very low impact, and being able to leverage it into what essentially is an Application Takeover.
 
