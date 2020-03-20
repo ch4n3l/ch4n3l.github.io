@@ -48,7 +48,7 @@ Loading the verification link, we can see the page looks as:
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/strikethrough.png)
 
 
-As we notice in the middle of the page, there is a strike through our name. At this point where there's smoke, there's file. Looking at the page source we see that our name is reflected in many places, however sanitized:
+As we notice in the middle of the page, there is a strike through our name. Looking at the page source we see that our name is reflected in many places, however sanitized:
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/sanitize1.png)
 
@@ -64,9 +64,9 @@ In order to confirm we are able to execute Javascript, I change my name to an XS
 
 I then attempt to re-verify:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/fail.png)
+![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/xssconfirmation.png)
 
-At the sight of the prompt, my heart skips a beat and we have Stored XSS!
+At the sight of the prompt, my heart skips a beat and we have XSS!
 
 However a weak prompt is not going to achieve any realistic 'impact', and furthermore there is a chance of this being a stored `Self-XSS` as this is reflecting under my account.
 
@@ -80,14 +80,13 @@ Afterwards, I sent the my `Server Owner Account` the XSS payload, and noticed th
 
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/serverowneraccount.png)
 
-[PIC OF XHR REQUEST]
-![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/fail.png)
+I loaded a verify link using the Attacker's username and opened it on the `Server Owner `account. Then I fired off a request to return the response of `https://altdentifier.com` and check if it contains the `Server Owner's` name. When true was returned, my heart skipped another beat, we are able to execute requests behalf of the `Server Owner`:
 
-When the response was returned and I CTRL-F'd the name of the `Server Owner`, my heart skipped another beat as there was a match. So while in the verify link, the name of the user is reflecting in the top right, the user who is stll xyz authenticated.
+![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/verifyattacker.png)
 
 So now we have two things:
 1. Stored XSS
-2. We are able to execute it on other users and perform actions as them.
+2. We are able to perform actions on behalf of the server owner.
 
 As with everything, there's always a problem lurking in the background. In our case, `Discord` would only allow `32 Characters` max as your username. While this might seem like a lot of characters, we would need open and closed `<script>` tags including the `src` attribtue in order to call our external Javascript and those script tags with the attribute took up `21 characters` alone.
 
@@ -183,7 +182,7 @@ Remember earlier how I mentioned that only sending one parameter would lead to s
 ![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/error.png)
 
 
-We were able to achieve persistence (as a form of denial of service). This makes this vulnerablity that more dangerous as the panicked `Server Admin` would go into his settings and attempt to change the `Verification Role` to a `Low Privilege Row` but they wouldn't be able to duue to the error. The only way for the `Server Admin` to 'fix' this situation is to kick the bot from the server, which would effectively make the server need to re-verify every user as the data would be lost.
+We were able to achieve persistence (as a form of denial of service). This makes this vulnerablity that more dangerous as the panicked `Server Admin` would go into his settings and attempt to change the `Verification Role` to a `Low Privilege Role` but they wouldn't be able to duue to the error. The only way for the `Server Admin` to 'fix' this situation is to kick the bot from the server, which would effectively make the server need to re-verify every user as the data would be lost.
 
 Lastly, here's a video proof of concept which demonstrates the exploit from the start using the Victim's perspective:
 
