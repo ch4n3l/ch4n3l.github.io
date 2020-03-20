@@ -186,7 +186,8 @@ We were able to achieve persistence (as a form of denial of service). This makes
 
 Lastly, here's a video proof of concept which demonstrates the exploit from the start using the Victim's perspective:
 
-![Screenshot]({{ site.baseurl }}/images/posts/2017/altdentifier/youtube.com)
+[![Stored XSS Discord Bot]({{ site.baseurl }}/images/posts/2017/mybb-add-admin/videopreview.png)](https://vimeo.com/399062232 Stored XSS Discord Bot")
+
 
 # iv. Conclusion
 
